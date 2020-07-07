@@ -6,6 +6,7 @@
 @import "main_overrides";
 
 
+
 pre, code {
 	border: none;
 }
@@ -21,7 +22,7 @@ background-color: #F1F1F1;
 color: #4A4A4A;
 padding: 10%;
 }
-
+/**
 article a {
 position: relative;
 display: inline-block;
@@ -47,8 +48,7 @@ a, a:visited, a:active, a:hover, h1 {
 
 p {
 	opacity: 1 !important;
-
-	color: #4A4A4A !important;
+	color: #4A4A4 !important;
 }
 
 h1, .h1, h2, .h2, h3, .h3, label, legend {
@@ -61,7 +61,7 @@ h1, .h1, h2, .h2, h3, .h3, label, legend {
 	letter-spacing: normal !important;
 	font-weight: normal;
 }
-
+**/
 .post-header h1 {
 text-shadow: none !important;
 line-height: inherit !important;
@@ -72,9 +72,12 @@ h5 {
 	margin-top: 25px;
 }
 
+/**
+load bar
 .instantclick-bar {
-    background: #CCFD34 !important;
+    background: #00ff !important;
 }
+**/
 
 .title {
 	display: inline-block;
@@ -123,7 +126,7 @@ article {
 font-family: 'Avenir Next', sans-serif;
 
 }
-
+/**
 article a {
 	position: relative;
 	display: inline-block;
@@ -136,10 +139,12 @@ article a {
 	background-size: 100% 40%;
 	color: #4A4A4A !important;
 }
-
+**/
+/**
 article a:hover {
 	color: rgba(0, 0, 0, 0.27) !important;
 }
+**/
 
 .page-title {
 	display: block;
@@ -213,7 +218,7 @@ a.page-link {
 }
 
 a.page-link::before {
-	content: '#';
+	content: '_';
 }
 
 .posts-archive__links {
@@ -300,24 +305,12 @@ p {
 	margin: 0;
 }
 
-.post-meta {
-	position: relative;
-	display: inline-block;
-	background: url(../images/highlight.png);
-	background-position: 2px 10px;
-	background-repeat: no-repeat;
-	padding-right: 5px;
-	margin: 0;
-	padding-top: 0;
-	background-size: 100%;
-	color: #4A4A4A !important;
-}
 
 .post-year {
 	margin-top: 20px;
 }
 
-
+/**
 .wrapper {
 	 max-width: inherit;
 	 margin: 0;
@@ -326,6 +319,7 @@ p {
 	 max-width: 1200px;
 	 width: 100%;
 }
+**/
 
 .site-header-top {
     padding-left: 0;
@@ -427,8 +421,14 @@ footer ul li {
 footer ul li {
 	margin-right: 10px;
 }
-
+/**
 footer ul li a {
 	font-size: 14px !important;
 	color: rgb(93, 93, 93) !important;
 }
+**/
+a {
+
+	color: $nice-white !important;
+}
+

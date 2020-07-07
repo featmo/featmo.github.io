@@ -1,5 +1,126 @@
 @import "extra_styles";
+html{
+    min-height: 100% !important;
+}
+
+.site-title {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 20px;
+    font-size: $title-size;
+    color: $nice-white !important;
+    background-color: $nice-orange;
+    display:block;
+}
+.site-title:after{
+    content: ".";
+}
+
 
 body {
-    background-color: #000000 !important;
+    display:block !important; 
+    background-color: $kinda-black !important;
+    color: $nice-white !important;
+     
+}
+
+.site-header{
+    margin-bottom: 40px !important;
+    display: block;
+}
+main{
+    margin-left: auto;
+    margin-right: auto;
+    display:block;
+    max-width: 95% !important;
+}
+footer{display:block;}
+
+.wrapper {
+    margin: 0;
+    padding-left: 0;
+    display: inline-block;
+    max-width: 100%;
+    width: 100%;
+}
+
+footer ul li a {
+    font-size: 14px !important;
+    color: $nice-orange !important;
+}
+
+.instantclick-bar {
+    background: $nice-white !important;
+}
+.post-image{
+    width: 50%;
+}
+.page-title{
+    padding-left: 2px !important;
+    font-size: 15px;  
+}
+.post-meta {
+    position: relative;
+    padding-left: 2px;
+	display: inline-block;
+	background-color: $kinda-black !important;
+    color: $kinda-white !important;
+    font-size: 11px;
+}
+.post-year{
+    position: relative;
+    display: inline-block;
+    width:100%;
+    padding-left: 2px;
+	background-color: $kinda-white !important;
+    color: $kinda-black !important;
+    font-size: 12px;
+
+}
+
+article a {
+    position: relative;
+    display: inline-block;
+    background-position: 0px 13px;
+    background-repeat: no-repeat;
+    background-size: 100% 40%;
+    color: $kinda-white !important;
+    text-decoration: underline !important;
+}
+
+article a:hover {
+	color: $almost-white !important;
+}
+
+a {
+    color: $nice-white;
+}
+
+a, a:hover {
+	color: $nice-orange !important;
+}
+a.site-title{
+    color: $nice-white !important;
+}
+    
+a, a:visited, a:active, a:hover, h1 {
+    color: $kinda-white;
+    text-decoration: none !important;
+    font-weight: 400;
+}
+    
+p {
+    opacity: 1 !important;
+    color: $nice-white !important;
+}
+    
+h1, .h1, h2, .h2, h3, .h3, label, legend {
+    font-family: "Avenir Next", system, sans-serif;
+    font-size: 1em;
+    color: $nice-white !important;
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 40px;
+    letter-spacing: normal !important;
+    font-weight: normal;
 }
