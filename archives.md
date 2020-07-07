@@ -4,14 +4,6 @@ title: archives
 navigation: true
 ---
 
-<span>instagram: <a style="text-decoration:underline !important" href="https://puppycodesarchive.nyc3.cdn.digitaloceanspaces.com/archive.zip">archive.zip</a></span>
-
-
-
-<br>
-
-
-
 <section class="post wrapper">
 {% for post in site.posts %}
   {% assign currentdate = post.date | date: "%Y" %}

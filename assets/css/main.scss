@@ -207,18 +207,18 @@ margin-top: 20px;
 
 .site-header {
 	padding: 0;
-	margin-bottom: 0;
+	margin-bottom: 0px;
 }
 
 a.page-link {
   font-size: 15px;
 	color: rgb(93, 93, 93);
-	padding-right: 15px;
+	padding-right: 10px;
 	font-weight: 400;
 }
 
-a.page-link::before {
-	content: '_';
+a.page-link::after {
+	content: '.';
 }
 
 .posts-archive__links {
@@ -366,6 +366,7 @@ a.active {
 }
 
 .post {
+	padding-top: 25px;
 	padding-left: 0;
 	padding-bottom: 0;
 }

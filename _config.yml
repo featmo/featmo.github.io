@@ -20,6 +20,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://featmo.github.io/" # the base hostname & protocol for your site
 twitter_username: isthismo
 github_username:  featmo
+linkedn_username: "https://www.linkedin.com/in/moses-eribo-5b7900108/"
 
 # Build settings
 markdown: kramdown

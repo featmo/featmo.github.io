@@ -4,5 +4,5 @@ title: about
 navigation: true
 ---
 
-Artist who like to tinker
+I like to tinker so follow me no my socials.
 
