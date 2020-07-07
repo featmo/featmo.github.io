@@ -1,4 +1,5 @@
 @import "extra_styles";
+
 html{
     min-height: 100% !important;
     scroll-behavior: smooth;
@@ -9,7 +10,7 @@ html{
     padding-left: 0;
     display: block;
     max-width: 100%;
-    width: 800px !important;
+    width: 100% !important;
     position: relative;
 }
 .site-title {
@@ -17,10 +18,13 @@ html{
     color: $nice-orange !important;
     background-color: none;
     display:block;
-    text-align: left !important;
+    text-align: right !important;
 }
 .site-title:after{
     content: ".";
+}
+.site-title:hover{
+    color: $kinda-orange !important;
 }
 
 
@@ -39,6 +43,7 @@ body {
 .site-header{
     margin-bottom: 50px !important;
     display: block;
+
 }
 main{
     margin-left: 0;
@@ -55,6 +60,7 @@ footer{display:block;}
     display: block;
     max-width: 100%;
     width: 800px;
+    
 }
 
 footer ul li a {

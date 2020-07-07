@@ -68,9 +68,9 @@ GEM
     mercenary (0.3.6)
     mini_portile2 (2.4.0)
     minitest (5.11.3)
-    nokogiri (1.10.3)
+    nokogiri (1.10.10)
       mini_portile2 (~> 2.4.0)
-    nokogiri (1.10.3-x64-mingw32)
+    nokogiri (1.10.10-x64-mingw32)
       mini_portile2 (~> 2.4.0)
     octopress-autoprefixer (2.0.1)
       autoprefixer-rails
@@ -79,7 +79,7 @@ GEM
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
     public_suffix (3.1.1)
-    rake (11.0.1)
+    rake (13.0.1)
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
@@ -109,8 +109,9 @@ DEPENDENCIES
   html-proofer (~> 3.0.0)
   jekyll-livereload
   jekyll-pwa-plugin
+  nokogiri (>= 1.10.8)
   octopress-autoprefixer
-  rake (~> 11.0.0)
+  rake (>= 12.3.3)
 
 RUBY VERSION
    ruby 2.6.6p146

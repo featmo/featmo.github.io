@@ -18,6 +18,7 @@ group :development do
 end
 
 group :test do
-    gem 'rake', '~> 11.0.0'
+    gem 'rake', '>= 12.3.3'
+    gem "nokogiri", ">= 1.10.8"
     gem 'html-proofer', '~> 3.0.0'
 end
