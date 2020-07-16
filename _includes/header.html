@@ -8,6 +8,12 @@
       <nav class="nav-main" role="navigation">
         <ul>
           {% for page in site.html_pages %}
+            {% if page.title == 'home' %}
+              <li><a class="page-link" href="{{ page.url }}">{{ page.title }}</a></li>
+            {% endif %}
+          {% endfor %}
+          
+          {% for page in site.html_pages %}
             {% if page.navigation %}
             <li><a class="page-link" href="{{ page.url }}">{{ page.title }}</a></li>
             {% endif %}
