@@ -1,0 +1,39 @@
+body {
+    font-family: Arial;
+    background-color: #fff;
+}
+.container{
+    display: flex;
+    flex-basis:100%;
+}
+#_main_{
+    display: flex;
+    flex-direction: column;
+}
+/* Some title bar stuff */
+#titlebar {
+    flex-direction: column;
+}
+#navbar{
+    flex-wrap: wrap;
+    color: #ddd;
+    width: 100%;
+}
+#navbar *{
+    width: 19%;
+}
+/* end title bar */
+#content{
+    flex-direction: row; 
+    background-color:blanchedalmond;
+}
+.container #desc {
+    background-color:aqua;
+    flex-shrink: 3;
+    
+}
+.container #details {
+    flex-direction: column;
+    background-color:red;
+    
+}
