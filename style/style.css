@@ -1,39 +1,27 @@
 body {
     font-family: Arial;
-    background-color: #fff;
+    background-color: #eee;
 }
-.container{
-    display: flex;
-    flex-basis:100%;
+a{
+    color: inherit;
+}
+@media screen {
+    
 }
 #_main_{
-    display: flex;
-    flex-direction: column;
+    background-color: aquamarine;
+    margin: auto 0;
+    max-width: 100%;
+    padding: 1em;
 }
-/* Some title bar stuff */
-#titlebar {
-    flex-direction: column;
+#title{
+    justify-content: center;
+    
+}
+.spacer{
+    height: 1em;
 }
 #navbar{
-    flex-wrap: wrap;
-    color: #ddd;
-    width: 100%;
-}
-#navbar *{
-    width: 19%;
-}
-/* end title bar */
-#content{
-    flex-direction: row; 
-    background-color:blanchedalmond;
-}
-.container #desc {
-    background-color:aqua;
-    flex-shrink: 3;
-    
-}
-.container #details {
-    flex-direction: column;
-    background-color:red;
-    
+    justify-content: space-around;
+    color: ;
 }
