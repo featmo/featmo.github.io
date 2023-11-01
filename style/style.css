@@ -5,9 +5,7 @@ body {
 a{
     color: inherit;
 }
-@media screen {
-    
-}
+
 #_main_{
     background-color: aquamarine;
     margin: auto 0;
