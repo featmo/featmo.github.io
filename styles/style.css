@@ -1,0 +1,122 @@
+/*###################  Defaults  #################*/
+
+nav,
+header,
+footer{
+    display: block;
+    width:100%;
+    margin:0;
+}
+
+body{
+    line-height:1;
+    margin:0;
+}
+
+/*################  Header Logo  #####################*/
+
+
+/*####################  Nav Bar  #################*/
+
+nav{
+    width:100%;
+    margin:0;
+}
+
+nav ul{
+    width:100%;
+    background-color:white;
+    overflow: hidden;
+    margin:0;
+    padding:0;
+}
+
+ul.topnav li{
+    list-style: none;
+    float:left;
+}
+
+ul.topnav li.topnav_right{
+    float:right;
+}
+
+ul.topnav li a{
+    display:block;
+    text-decoration:none;
+    min-height:16px;
+    text-align:center;
+    padding:14px;
+    text-transform:uppercase;
+    color:#92b09d;
+}
+
+ul.topnav li a:hover{
+    background-color:#92b09d;
+    color:white;
+}
+
+ul.topnav li.dropdown_icon{
+    display:none;
+}
+
+.container-fluid{
+    padding:0;
+    margin:0;
+}
+
+.navbar{
+    padding:0;
+}
+
+.navbar-brand{
+    padding:0;
+    margin:0;
+}
+
+/*#############  Page Background . #############*/
+
+.homepage_background{
+    background-image:url(../images/background_image.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:cover;
+}
+
+/*################  Mobile Device  #####################*/
+
+@media screen and (max-width: 680px){
+    nav ul{
+        background-image:none;
+        background-color:white;
+    }
+    
+    ul.topnav li:not(:nth-child(1)){
+        display:none;
+    }
+    
+    ul.topnav li.dropdown_icon{
+        display:block;
+        float:right;
+    }
+    
+    ul.topnav.mobile li.dropdown_icon{
+        position:absolute;
+        top:0;
+        right:0;
+    }
+    
+    ul.topnav.mobile{
+        position:relative;
+    }
+    
+    ul.topnav.mobile li{
+        display:inline;
+        float:none;
+    }
+    
+    ul.topnav.mobile li a{
+        display:block;
+        text-align:left;
+    }
+}
