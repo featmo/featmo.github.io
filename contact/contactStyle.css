@@ -1,0 +1,41 @@
+/* To be merged into main CSS file at a later stage */
+
+
+
+
+
+/*#############  Page Background . #############*/
+
+.contact_background {
+    background-image: url(../images/background_image.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/*################  Footer  #####################*/
+.footer-icon {
+    margin-right: 5px;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer-logo {
+    height: 100px;
+}
+
+#footer {
+    margin-top: 690px;
+    background-color: #f6f6f6;
+    color: #92b09d;
+    border-top: 1rem solid #92b09d;
+}
