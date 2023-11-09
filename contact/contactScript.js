@@ -26,7 +26,7 @@ const validateEmail = (email) => {
 }
 
 const validatePhoneNumber = (number) => {
-    if (String(number).toLowerCase().match(/08[35679]\d{7}|0[1245679]\d{6,9}/)) {
+    if (String(number).toLowerCase().match(/^08[35679]\d{7}$|^0[1245679]\d{6,9}$/)) {
         document.getElementById('phone-number').classList.remove('invalid-input');
         return true;
     } else {
@@ -62,10 +62,8 @@ function checkButtonActivation() {
 
 
     if (emailIsValid && phoneIsValid && contactReasonIsValid && messageIsValid) {
-        console.log(contactReason.value);
         submitButton.disabled = false;
     } else {
-        console.log(contactReason.value);
         submitButton.disabled = true;
     }
 }
@@ -74,5 +72,3 @@ email.addEventListener('change', (event) => checkButtonActivation());
 phoneNumber.addEventListener('change', (event) => checkButtonActivation());
 contactReason.addEventListener('change', (event) => checkButtonActivation());
 message.addEventListener('change', (event) => checkButtonActivation());
-
-
