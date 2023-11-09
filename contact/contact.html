@@ -32,27 +32,28 @@ include a checkbox / radio / dropdown field. Include JavaScript validation. -->
     <div id="contact-form" class="container px-5 py-3 my-3">
         <div class="row mb-4">
             <label for="exampleFormControlInput1" class="form-label">Email Address</label>
-            <input type="email" class="form-control" placeholder="name@example.com">
+            <input id="email" type="email" class="form-control" placeholder="name@example.com">
         </div>
         <div class="row mb-4">
             <label for="exampleFormControlInput1" class="form-label">Phone Number</label>
-            <input type="tel" class="form-control" placeholder="(01) 1234 5678">
+            <input id="phone-number" type="tel" class="form-control" placeholder="01123567">
         </div>
         <div class="row mb-4">
             <label for="exampleFormControlInput1" class="form-label">Contact Reason</label>
-            <select class="form-select" aria-label="Select why you are contacting us">
-                <option value="Flowers" selected>Flowers</option>
-                <option value="Gifts">Gifts</option>
-                <option value="Gifts">Other</option>
+            <select id="contact-reason" class="form-select" aria-label="Select why you are contacting us">
+                <option value="" selected>Select Your Contact Reason</option>
+                <option value="flowers">Flowers</option>
+                <option value="gifts">Gifts</option>
+                <option value="other">Other</option>
             </select>
         </div>
         <div class="row mb-4">
             <label for="exampleFormControlTextarea1" class="form-label">Message</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+            <textarea id="message" class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
         </div>
         <div class="row mb-4">
             <div class="col-md-3 px-0">
-                <button type="submit" class="btn btn-primary form-button">Submit</button>
+                <button id="submit-button" type="submit" class="btn btn-primary form-button" disabled>Submit</button>
             </div>
         </div>
 
@@ -99,7 +100,7 @@ include a checkbox / radio / dropdown field. Include JavaScript validation. -->
             </div>
         </div>
     </footer>
-
+    <script src="contactScript.js"></script>
 </body>
 
 </html>

@@ -26,6 +26,11 @@
     border: 1px solid #92b09d;
 }
 
+.form-button:disabled {
+    background-color: #92b09d;
+    border: 1px solid #92b09d;
+}
+
 .form-button:hover {
     background-color: #f6f6f6;
     color: #92b09d;
@@ -34,6 +39,11 @@
 
 .form-label {
     font-weight: bold;
+}
+
+.invalid-input {
+    background-color: #FF7F7F;
+    border: 1px solid #ff0000;
 }
 
 #contact-form {
