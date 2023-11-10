@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="../scripts/quizScript.js" defer></script>
+    </head>
+    <body>
+        <div id="quiz_body">
+            <div style="height: 600px">
+                <img id="quiz_image" src="">              
+            </div>
+            <div id="quiz_answers">
+                <input type="checkbox" id ="answer1" name="answer" value="rose" onclick="oneSelect(this)">
+                <label for="answer1">Rose</label><br>
+                <input type="checkbox" id ="answer2" name="answer" value="tulip" onclick="oneSelect(this)">
+                <label for="answer2">tulip</label><br>
+                <input type="checkbox" id ="answer3" name="answer" value="daisy" onclick="oneSelect(this)">
+                <label for="answer2">daisy</label><br>
+
+                <button id="submit" onclick="checkAnswer()">Submit</button>
+            </div>
+            <!-- <form id="quiz_answers" defer>
+                <input type="checkbox" id="answer1" value="tulip">
+                <label for="answer1">tulip</label>
+            </form> -->
+        </div>
+    </body>
+</html>
