@@ -26,9 +26,14 @@
     border: 1px solid #92b09d;
 }
 
-.form-button:disabled {
-    background-color: #92b09d;
-    border: 1px solid #92b09d;
+.form-button-disabled {
+    background-color: #b4c8bb56 !important;
+    border: 1px solid #b4c8bb56 !important;
+}
+
+.form-button:active {
+    background-color: #92b09d !important;
+    border: 1px solid #92b09d !important;
 }
 
 .form-button:hover {
