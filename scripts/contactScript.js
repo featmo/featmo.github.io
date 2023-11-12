@@ -1,7 +1,3 @@
-// To be added to the main scripts folder when it is created.
-// Want to prevent merge issues for now.
-
-
 // submit button activation
 // source: https://stackoverflow.com/questions/67961789/enable-submit-button-after-form-fields-are-fill
 
@@ -76,10 +72,6 @@ function highlightInvalidInputs() {
 
 }
 
-
-
-
-
 function checkButtonActivation() {
     let emailIsValid = validateEmail(email.value);
     let phoneIsValid = validatePhoneNumber(phoneNumber.value);
@@ -100,8 +92,31 @@ function checkButtonActivation() {
     }
 }
 
+function submitForm() {
+    if (document.getElementById('submit-button').classList.contains('form-button-disabled')) {
+        console.log('Button is disabled');
+        return;
+    }
+    document.getElementById('contact-form').style.display = 'none';
+    document.getElementById('thank-you-message').style.display = 'inline';
+}
+
+function downloadFile() {
+    // https://stackoverflow.com/questions/34156282/how-do-i-save-json-to-local-text-file
+    // https://www.geeksforgeeks.org/javascript-program-to-write-data-in-a-text-file/
+    const link = document.createElement('a');
+    const text = "Email: " + email.value + "\r\nPhone Number: " + phoneNumber.value + "\r\nContact Reason: " + contactReason.value + "\r\nMessage: " + message.value;
+    const file = new Blob([text], { type: 'text/plain;' });
+    link.href = URL.createObjectURL(file);
+    link.download = 'YourData.txt';
+    link.click();
+    URL.revokeObjectURL(link.href);
+}
+
 email.addEventListener('change', (event) => checkButtonActivation());
 phoneNumber.addEventListener('change', (event) => checkButtonActivation());
 contactReason.addEventListener('change', (event) => checkButtonActivation());
 message.addEventListener('change', (event) => checkButtonActivation());
 submitButton.addEventListener('click', (event) => highlightInvalidInputs());
+submitButton.addEventListener('click', (event) => submitForm());
+document.getElementById('download-button').addEventListener('click', (event) => downloadFile());
