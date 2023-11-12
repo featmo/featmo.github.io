@@ -6,7 +6,7 @@
 
 /*#############  Page Background (written by Catherine. #############*/
 
-.contact_background {
+.background {
     background-image: url(../images/background_image.png);
     background-position: center center;
     background-repeat: no-repeat;
@@ -16,6 +16,13 @@
 
 
 /*################  Contact Form (written by Philipp)  #####################*/
+.content-container {
+    background-color: #f6f6f6;
+    color: #92b09d;
+    border-radius: 10px;
+    border: 0.5rem solid #92b09d;
+}
+
 .form-button {
     background-color: #92b09d;
     border: 1px solid #92b09d;
@@ -46,19 +53,8 @@
     border: 1px solid #ff0000;
 }
 
-#contact-form {
-    background-color: #f6f6f6;
-    color: #92b09d;
-    border-radius: 10px;
-    border: 0.5rem solid #92b09d;
-}
-
 #thank-you-message {
     display: none;
-    background-color: #f6f6f6;
-    color: #92b09d;
-    border-radius: 10px;
-    border: 0.5rem solid #92b09d;
 }
 
 
