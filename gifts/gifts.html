@@ -24,55 +24,53 @@
 
 </head>
 
-<body id="gift-body" class="background">
-
-    <!--Source: https://www.youtube.com/watch?v=L4_Dek71ku4-->
+<body class="background">
 
     <div class="container px-5 py-3 my-3 content-container text-center">
-        <div class="row justify-content-center">
-            <div class="col-lg-6 mb-3">
+        <div class="row justify-content-around">
+            <div class="col-lg-6 mb-5">
                 <div class="card">
                     <img src="../images/gift_images/balloons.jpg" class="card-img-top" alt="Picture of balloons"
                         data-bs-toggle="modal" data-bs-target="#exampleModal">
                     <div class="card-body">
                         <h3 class="card-title">Balloons</h3>
-                        <p>$20</p>
+                        <h4>€30</h4>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 mb-3">
+            <div class="col-lg-6 mb-5">
                 <div class="card">
-                    <img src="../images/gift_images/balloons.jpg" class="card-img-top" alt="Picture of balloons">
+                    <img src="../images/gift_images/champagne.jpg" class="card-img-top" alt="Picture of champagne">
                     <div class="card-body">
-                        <h3 class="card-title">Balloons</h3>
-                        <p>$20</p>
+                        <h3 class="card-title">Champagne</h3>
+                        <h4>€75</h4>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 mb-3">
+            <div class="col-lg-6 mb-5">
                 <div class="card">
-                    <img src="../images/gift_images/balloons.jpg" class="card-img-top" alt="Picture of balloons">
+                    <img src="../images/gift_images/chocolates.jpg" class="card-img-top" alt="Picture of chocolates">
                     <div class="card-body">
-                        <h3 class="card-title">Balloons</h3>
-                        <p>$20</p>
+                        <h3 class="card-title">Chocolates</h3>
+                        <h4>€15</h4>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 mb-3">
+            <div class="col-lg-6 mb-5">
                 <div class="card">
-                    <img src="../images/gift_images/balloons.jpg" class="card-img-top" alt="Picture of balloons">
+                    <img src="../images/gift_images/teddy.jpg" class="card-img-top" alt="Picture of a teddy bear">
                     <div class="card-body">
-                        <h3 class="card-title">Balloons</h3>
-                        <p>$20</p>
+                        <h3 class="card-title">Teddy Bear</h3>
+                        <h4>€25</h4>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 mb-3">
+            <div class="col-lg-6 mb-5">
                 <div class="card">
-                    <img src="../images/gift_images/balloons.jpg" class="card-img-top" alt="Picture of balloons">
+                    <img src="../images/gift_images/vase.jpg" class="card-img-top" alt="Picture of a vase">
                     <div class="card-body">
-                        <h3 class="card-title">Balloons</h3>
-                        <p>$20</p>
+                        <h3 class="card-title">Vase</h3>
+                        <h4>€20</h4>
                     </div>
                 </div>
             </div>
@@ -81,20 +79,22 @@
 
     <!-- Modal From Bootstrap Docs https://getbootstrap.com/docs/5.3/components/modal/ -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
                     <h1 id="product-title" class="modal-title fs-5" id="exampleModalLabel">Balloons</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p>Add a burst of color to your special occasion with our high-quality balloons! Perfect
+                    <p id="product-description">Add a burst of color to your special occasion with our high-quality
+                        balloons! Perfect
                         for birthdays, anniversaries, or anything else you need a balloon for. Inflated with helium, our
                         balloons are sure to 'elevate' any event!</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary form-button">Order</button>
+                    <button id="order-button" type="button" class="btn btn-primary form-button"><i
+                            class="bi bi-bag-fill"></i> Order</button>
                 </div>
             </div>
         </div>

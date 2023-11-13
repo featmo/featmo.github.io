@@ -1,5 +1,5 @@
 /* To be merged into main CSS file at a later stage */
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Poppins:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Poppins:wght@400;500&family=Original+Surfer&family=Open+Sans&display=swap');
 
 
 
@@ -62,6 +62,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    font-family: 'Open Sans', sans-serif;
 }
 
 
@@ -96,25 +97,11 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-/*################  Footer (written by Philipp)  #####################*/
-#product-details>h3 {
-    text-align: center;
+/*################  Gifts (written by Philipp)  #####################*/
+.card {
+    color: #92b09d;
 }
 
-#product-details>p {
-    position: absolute;
-    text-align: justify;
-    padding-left: 20px;
-    padding-right: 20px;
-    height: auto;
-}
-
-
-#product-details {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: inherit;
-    width: 50vw;
+.card h3 {
+    font-family: 'Original Surfer', sans-serif;
 }
