@@ -1,103 +1,94 @@
 <DOCTYPE!>
     <html lang="en-IE">
-
-    <head>
-        <title>The Flower Co. -Blooms for Every Occasion</title>
-        <!------------Bootstrap import------------->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-            crossorigin="anonymous"></script>
-        <!--     <script type="text/javascript" href="scripts/homeScript.js" defer></script>-->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="styles/style.css" />
-        <!----------- mobile responsiveness ------->
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-    </head>
-
-    <body class="homepage_background">
-        <!------------- Header and NavBar ----------->
-        <header class="main_header">
-            <nav class="navbar bg-transparent">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#">
-                        <img src="images/Logo_header.png" alt="Logo" width="100%" height="auto"
-                            class="d-inline-block align-text-top">
-                    </a>
+        <head>
+            <title>The Flower Co. -Blooms for Every Occasion</title>
+<!------------Bootstrap import------------->
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+            <!-- <script type="text/javascript" src="scripts/homeScript.js" defer></script> -->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap" rel="stylesheet">
+            <link rel="stylesheet" href="styles/style.css"/>
+<!----------- mobile responsiveness ------->
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+        </head>
+        <body class="homepage_background">
+<!------------- Header and NavBar ----------->
+            <header class="main_header">
+                <nav class="navbar bg-transparent">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="index.html">
+                        <img src="images/Logo_header.png" alt="Logo" width="100%" height="auto" class="d-inline-block align-text-top">
+                        </a>
+                    </div>
+                    <ul class="topnav" id="dropdown_click">
+                        <li><a href="index.html">Home</a></li>
+                        <li class="christmas_topnav"><a href="christmas/christmas.html">Christmas</a></li>
+                        <li><a href="#bouquets">Flowers</a></li>
+                        <li><a href="gifts/gifts.html">Gifts</a></li>
+                        <li class="topnav_right"><a href="contact/contact.html">Contact</a></li>
+                        <li class="topnav_right"><a href="#about">About</a></li>
+                        <li class="topnav_right"><a href="#delivery">Delivery</a></li>
+                        <li class="dropdown_icon" id="dropdown_btn"><a href="#">&#9776;</a></li>
+                    </ul>
+                </nav>
+            </header>
+<!---------- Description and Products ---------->
+            <div class= "parent_container">
+                 <div class= "child">
+                     <h2 class="homepage_h2">Win a discount</h2>
+                     <p>Think you know your daisies from your dahlias?<br><br>This month we're putting your floral knowledge to the test!<br>Answer our questions correctly and you'll be rewarded with a code for 10% off your favourite bouquet!</p>
+                     <button class="button"><a href="quiz/quiz.html">Take the quiz now!</a></button>
                 </div>
-                <ul class="topnav" id="dropdown_click">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#bouquets">Flowers</a></li>
-                    <li><a href="#gifts">Gifts</a></li>
-                    <li class="topnav_right"><a href="contact/contact.html">Contact Us</a></li>
-                    <li class="topnav_right"><a href="#about">About Us</a></li>
-                    <li class="topnav_right"><a href="#delivery">Delivery</a></li>
-                    <li class="dropdown_icon" id="dropdown_btn"><a href="javascript:void(0);"
-                            onclick="dropdownMenu()">&#9776;</a></li>
-                </ul>
-            </nav>
-        </header>
-        <!---------- Description and Products ---------->
-        <div class="parent_container">
-            <div class="child">
-                <h2>Win a discount</h2>
-                <p>Think you know your daisies from your dahlias?<br><br>This month we're putting your floral knowledge
-                    to the test!<br>Answer our questions correctly and you'll be rewarded with a code for 10% off your
-                    favourite bouquet!</p>
-                <button class="button"><a href="quiz/quiz.html">Take the quiz now!</a></button>
-            </div>
-            <div class="child christmas">
-                <h2 class="christmas_font">Christmas</h2>
-                <div class="product_container">
-                    <img class="image" src="images/christmas_flowers.jpg" alt="An image of Christmas flowers">
-                    <div class="text_container">
-                        <p class="christmas_text"><br>Bloom into the spirit of the season this Christmas with our
-                            specially selected range of festive floral displays</p>
-                        <button class="button christmas_button">View Seasonal Bouquets</button>
+                <div class= "child christmas">
+                    <h2 class="christmas_font homepage_h2">Christmas</h2>
+                    <div class="product_container">
+                        <img class="image" src="images/christmas_flowers.jpg" alt="An image of Christmas flowers">
+                        <div class="text_container">
+                            <p class="christmas_text"><br>Bloom into the spirit of the season with our specially selected range of festive floral displays</p>
+                            <button class="button christmas_button"><a href="christmas/christmas.html">View Christmas Bouquets</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class= "child">
+                    <h2 class="homepage_h2">Flowers</h2>
+                    <div class="product_container">
+                        <img class="image" src="images/flowers.jpg" alt="An image of a bouquet of flowers">
+                        <div class="text_container">
+                            <p><br>Explore our selection of beautiful bouquets and fresh flower arrangements</p>
+                            <button class="button">View All Bouquets</button>
+                        </div>
+                    </div>
+                </div>
+                <div class= "child">
+                    <h2 class="homepage_h2">Gifts</h2>
+                     <div class="product_container">
+                        <img class="image" src="images/gifts.jpg" alt="An image of a box of chocolates">
+                        <div class="text_container">
+                            <p><br>Make your purchase extra special with a finishing touch (or two!) from our range of artisanal gifts</p>
+                            <button class="button"><a href="gifts/gifts.html">View Gifts</a></button>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="child">
-                <h2>Flowers</h2>
-                <div class="product_container">
-                    <img class="image" src="images/flowers.jpg" alt="An image of a bouquet of flowers">
-                    <div class="text_container">
-                        <p><br>Explore our selection of beautiful bouquets and fresh flower arrangements</p>
-                        <button class="button">View All Bouquets</button>
-                    </div>
-                </div>
-            </div>
-            <div class="child">
-                <h2>Gifts</h2>
-                <div class="product_container">
-                    <img class="image" src="images/gifts.jpg" alt="An image of a box of chocolates">
-                    <div class="text_container">
-                        <p><br>Make your purchase extra special with a finishing touch (or two!) from our range of
-                            artisanal gifts</p>
-                        <button class="button">View Gifts</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+            
 
-        <!---------  JavaScript (needs to be externalised) --------->
-        <script>
-            function dropdownMenu() {
-                const dropdown = document.getElementById('dropdown_click');
-                if (dropdown.className === "topnav") {
-                    dropdown.className += " mobile";
+-------  JavaScript (needs to be externalised) -------
+            <script>
+                function dropdownMenu(){
+                    const dropdown = document.getElementById('dropdown_click');
+                    if(dropdown.className=== "topnav"){
+                    dropdown.className+= " mobile";
+                    }
+                    else{
+                    dropdown.className= "topnav";
+                    }
                 }
-                else {
-                    dropdown.className = "topnav";
-                }
-            }
-        </script>
+            </script>
 
-    </body>
 
+        </body>
     </html>
