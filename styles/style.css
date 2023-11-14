@@ -103,6 +103,23 @@ ul.topnav li.christmas_topnav:hover{
     background-image: linear-gradient(black,#191970, white);
 }
 
+#snow-container {
+    height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    top:0;
+    transition: opacity 500ms;
+    width: 100%;
+    z-index: -1;
+    }
+
+.snow {
+    animation: fall ease-in infinite, sway ease-in-out infinite;
+    color: #DBF0F9 !important;
+    position: absolute;
+}
+
+
 @keyframes fall {
   0% {
     opacity: 0;
@@ -134,21 +151,6 @@ ul.topnav li.christmas_topnav:hover{
   }
 }
 
-#snow-container {  
-  height: 100vh;
-  overflow: hidden;
-  position: absolute;
-  top:250px;
-  transition: opacity 500ms;
-  width: 100%;
-  z-index: -1;
-}
-
-.snow {
-  animation: fall ease-in infinite, sway ease-in-out infinite;
-  color: #DBF0F9 !important;
-  position: absolute;
-}
 
 /*################  Mobile Device (written by Catherine)#################*/
 
@@ -341,3 +343,50 @@ h2.homepage_h2{
     animation: animatedBackground 10s linear infinite;
 }
 
+/*############## Products ################*/
+
+.card {
+    color: #92b09d;
+    min-height: 100%;
+    margin:0 auto;
+}
+
+.card h3 {
+    font-family: 'Original Surfer', sans-serif;
+}
+
+
+.content-container-christmas {
+    position:relative;
+    margin-top:80px !important;
+    padding-top:50px !important;
+    background-color:#f6f6f6 ;
+    color: #92b09d;
+    border-radius: 10px;
+    border: none;
+}
+
+.content-container-christmas::before{
+    content:"";
+    position:absolute;
+    border-radius: 15px;
+    top:-5px;
+    left:-5px;
+    right:-5px;
+    bottom:-5px;
+    z-index:-1;
+    background:repeating-linear-gradient(-45deg,#D6001C 0,#D6001C 10px,white 10px, white 20px,green 20px, green 30px, #D6001C 30px, #D6001C 40px);
+    animation: animate 15s linear infinite;
+}
+
+.christmas_google_font{
+    margin-top: 70px;
+    text-align: center;
+    color:white;
+    text-shadow:3px 3px 2px skyblue;
+    font-family:'Mountains of Christmas', serif;
+}
+
+div.christmas_google_font p{
+    font-size:2em;
+}

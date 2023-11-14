@@ -5,6 +5,11 @@
 <!------------Bootstrap import------------->
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+            <!--BootStrap Icons Import-->
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@700&family=Original+Surfer&display=swap" rel="stylesheet">
             <script type="text/javascript" src="../scripts/christmasScript.js" defer></script>
             <link rel="stylesheet" href="../styles/style.css"/>
 <!----------- mobile responsiveness ------->
@@ -23,7 +28,7 @@
                         <li><a href="../index.html">Home</a></li>
                         <li class="christmas_topnav"><a href="christmas.html">Christmas</a></li>
                         <li><a href="#bouquets">Flowers</a></li>
-                        <li><a href="#gifts">Gifts</a></li>
+                        <li><a href="gifts/gifts.html">Gifts</a></li>
                         <li class="topnav_right"><a href="../contact/contact.html">Contact</a></li>
                         <li class="topnav_right"><a href="#about">About</a></li>
                         <li class="topnav_right"><a href="#delivery">Delivery</a></li>
@@ -31,9 +36,98 @@
                     </ul>
                 </nav>
             </header>
+<!-------------- ############ Products ############## ------------>
+            <div class="christmas_google_font">
+                <h1> Season's Greetings from The Flower Co. </h1>
+            
+                <p>
+                <br>
+                Choose from our festive range below
+                </p>
+            </div>
+            <div class="container px-5 py-3 my-3 content-container-christmas text-center">
+                <div class="row justify-content-around">
+                    <div class="col-lg-6 mb-5">
+                        <div class="card">
+                            <img src="../images/christmas_images/christmas_flowers_1.jpg" class="card-img-top" alt="Picture of Christmas flowers"
+                                data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <div class="card-body">
+                                <h3 class="card-title">Winter Wonderland Bouquet</h3>
+                                <h4>€50</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-5">
+                        <div class="card">
+                            <img src="../images/christmas_images/christmas_flowers_4.png" class="card-img-top" alt="Picture of Christmas Holly bouquet"
+                                data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <div class="card-body">
+                                <h3 class="card-title">The Holly and the Ivy Bouquet</h3>
+                                <h4>€25</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-5">
+                        <div class="card">
+                            <img src="../images/christmas_images/christmas_flowers_3.png" class="card-img-top" alt="Picture of Christmas flowers"
+                                data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <div class="card-body">
+                                <h3 class="card-title">Star of Christmas Bouquet</h3>
+                                <h4>€45</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-5">
+                        <div class="card">
+                            <img src="../images/christmas_images/christmas_flowers_2.png" class="card-img-top" alt="Picture of Christmas flowers">
+                            <div class="card-body">
+                                <h3 class="card-title">All the Trimmings Bouquet</h3>
+                                <h4>€55</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-5">
+                        <div class="card">
+                            <img src="../images/christmas_images/wreath.jpg" class="card-img-top" alt="Picture of a Christmas wreath">
+                            <div class="card-body">
+                                <h3 class="card-title">Wreath</h3>
+                                <h4>€60</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-5">
+                        <div class="card">
+                            <img src="../images/christmas_images/candle_holder.png" class="card-img-top" alt="Picture of a Christmas candle holder">
+                            <div class="card-body">
+                                <h3 class="card-title">Candle Holder</h3>
+                                <h4>€15</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-5">
+                        <div class="card">
+                            <img src="../images/christmas_images/garland.jpg" class="card-img-top" alt="Picture of a Christmas garland">
+                            <div class="card-body">
+                                <h3 class="card-title">Garland</h3>
+                                <h4>€25</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-5">
+                        <div class="card">
+                            <img src="../images/christmas_images/gift_ties.jpg" class="card-img-top" alt="Picture of a Christmas gift">
+                            <div class="card-body">
+                                <h3 class="card-title">Gift Ties</h3>
+                                <h4>€5</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div id="snow-container">
             </div>
-            <!---------  JavaScript (needs to be externalised) --------->
+    
+<!--      JavaScript (needs to be externalised) --------->
             <script>
                 function dropdownMenu(){
                     const dropdown = document.getElementById('dropdown_click');
