@@ -16,17 +16,36 @@
         <!--Google Fonts Import-->
        
         <!--Stylesheet Import-->
-        <link rel="stylesheet" href="../styles/contactStyle.css">
+        <link rel="stylesheet" href="../styles/style.css">
         <!-- Scripts -->
         <script src="../scripts/quizScript.js" defer></script>
         <title>Quiz</title>
         
     </head>
     <body class="background">
-        <div class="container" id="quiz_body">
-            <div style="height: 600px">
-                <img id="quiz_image" src="">              
-            </div>
+        <header class="main_header">
+            <nav class="navbar bg-transparent">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="../index.html">
+                    <img src="../images/Logo_header.png" alt="Logo" width="100%" height="auto" class="d-inline-block align-text-top">
+                    </a>
+                </div>
+                <ul class="topnav" id="dropdown_click">
+                    <li><a href="../index.html">Home</a></li>
+                    <li class="christmas_topnav"><a href="../christmas/christmas.html">Christmas</a></li>
+                    <li><a href="#bouquets">Flowers</a></li>
+                    <li><a href="../gifts/gifts.html">Gifts</a></li>
+                    <li class="topnav_right"><a href="../contact/contact.html">Contact</a></li>
+                    <li class="topnav_right"><a href="#">About</a></li>
+                    <li class="topnav_right"><a href="#delivery">Delivery</a></li>
+                    <li class="dropdown_icon"><a href="">&#9776;</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="container px-5 py-3 my-3 content-container flowers_intro" id="quiz_body">
+            
+            <img style="width: 100%" id="quiz_image" src="">              
+            
             <div id="quiz_answers">
                 <input type="checkbox" id ="answer1" name="answer" value="rose" onclick="oneSelect(this)">
                 <label for="answer1">Rose</label><br>
@@ -35,7 +54,7 @@
                 <input type="checkbox" id ="answer3" name="answer" value="daisy" onclick="oneSelect(this)">
                 <label for="answer2">daisy</label><br>
 
-                <button id="submit" onclick="checkAnswer()">Submit</button>
+                <button id="submit" class="button" onclick="checkAnswer()">Submit</button>
             </div>
             <!-- <form id="quiz_answers" defer>
                 <input type="checkbox" id="answer1" value="tulip">
@@ -60,14 +79,15 @@
                         <h5 class="footer-heading mb-3">Our Products</h5>
                         <ul class="footer-list">
                             <li><a class="footer-link" href="#">Flowers</a></li>
-                            <li><a class="footer-link" href="../gifts/gifts.html">Gifts</a></li>
+                            <li><a class="footer-link" href="#">Gifts</a></li>
                         </ul>
                     </div>
     
                     <div class="col-md-4">
                         <h5 class="footer-heading mb-3">Contact</h5>
                         <ul class="footer-list">
-                            <li><i class="bi bi-chat-fill footer-icon"></i><a class="footer-link" href="#">Contact Form</a>
+                            <li><i class="bi bi-chat-fill footer-icon"></i><a class="footer-link"
+                                    href="../contact/contact.html">Contact Form</a>
                             </li>
                             <li><i class="bi bi-envelope-fill footer-icon"></i><a class="footer-link"
                                     href="mailto:example@theflower.co">example@theflower.co</a>
@@ -79,6 +99,7 @@
                                 Castleknock, Dublin, D08 E1W3</li>
                         </ul>
                     </div>
+    
                 </div>
             </div>
         </footer>

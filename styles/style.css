@@ -598,22 +598,6 @@ div.christmas_google_font h1 {
     font-family: 'Poppins', sans-serif;
 }
 
-<<<<<<< HEAD
-/* ME WIP about us page styling
-TODO: unify with existing styles */
-
-.about_us{
-    font-family: 'Poppins', sans-serif;
-    text-align: center;
-}
-@media screen and (max-width: 690px) {
-    #about_us_header{
-        font-size: 40px;
-    }
-    #about_us_content{
-        font-size: 20px;
-    }
-=======
 /*****************************************************************************/
 /*#################### Contact Us Page (written by Philipp)################*/
 /*****************************************************************************/
@@ -669,5 +653,4 @@ TODO: unify with existing styles */
 
 .card h3 {
     font-family: 'Original Surfer', sans-serif;
->>>>>>> 1e942018a4637ef97fca3bad869e67842f2679c8
 }
