@@ -98,6 +98,7 @@ function submitForm() {
         return;
     }
     document.getElementById('contact-form').style.display = 'none';
+    document.getElementById('contact-page-intro').style.display = 'none';
     document.getElementById('thank-you-message').style.display = 'inline';
 }
 

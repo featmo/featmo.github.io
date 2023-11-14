@@ -19,15 +19,44 @@
 
 
     <!--Stylesheet Import-->
-    <link rel="stylesheet" href="../styles/contactStyle.css">
+    <link rel="stylesheet" href="../styles/style.css">
     <title>Contact Us</title>
 </head>
 
 <body class="background">
 
+    <header class="main_header">
+        <nav class="navbar bg-transparent">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="../images/Logo_header.png" alt="Logo" width="100%" height="auto"
+                        class="d-inline-block align-text-top">
+                </a>
+            </div>
+            <ul class="topnav" id="dropdown_click">
+                <li><a href="../index.html">Home</a></li>
+                <li class="christmas_topnav"><a href="../christmas/christmas.html">Christmas</a></li>
+                <li><a href="../flowers/flowers.html">Flowers</a></li>
+                <li><a href="../gifts/gifts.html">Gifts</a></li>
+                <li class="topnav_right"><a href="#">Contact</a></li>
+                <li class="topnav_right"><a href="#about">About</a></li>
+                <li class="topnav_right"><a href="#delivery">Delivery</a></li>
+                <li class="dropdown_icon"><a href="">&#9776;</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!------------ Page Intro (by Catherine edited by Philipp to fit this page)---------------------->
+
+    <div id="contact-page-intro" class="container px-5 py-3 my-3 content-container flowers_intro">
+        <h1>Contact Us</h1>
+        <br>
+        <p>Do you need to get in touch with us? Simply fill out the form below and we'll be in
+            touch with you as soon as possible.</p>
+    </div>
+
     <!--Form Requirements with at least 4 fields of different types such as text, numeric, etc. Form to
 include a checkbox / radio / dropdown field. Include JavaScript validation. -->
-
     <div id="contact-form" class="container px-5 py-3 my-3 content-container">
         <div class="row mb-4">
             <label for="exampleFormControlInput1" class="form-label">Email Address</label>
@@ -84,7 +113,7 @@ include a checkbox / radio / dropdown field. Include JavaScript validation. -->
                 <div class="col-md-3">
                     <h5 class="footer-heading mb-3">Our Products</h5>
                     <ul class="footer-list">
-                        <li><a class="footer-link" href="#">Flowers</a></li>
+                        <li><a class="footer-link" href="../flowers/flowers.html">Flowers</a></li>
                         <li><a class="footer-link" href="../gifts/gifts.html">Gifts</a></li>
                     </ul>
                 </div>
@@ -108,6 +137,7 @@ include a checkbox / radio / dropdown field. Include JavaScript validation. -->
         </div>
     </footer>
     <script src=" ../scripts/contactScript.js"></script>
+    <script src=" ../scripts/navbarScript.js"></script>
 </body>
 
 </html>
