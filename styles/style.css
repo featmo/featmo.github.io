@@ -578,3 +578,19 @@ div.christmas_google_font h1{
     animation: animate 15s linear infinite;
     font-family: 'Poppins', sans-serif;
 }
+
+/* ME WIP about us page styling
+TODO: unify with existing styles */
+
+.about_us{
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+@media screen and (max-width: 690px) {
+    #about_us_header{
+        font-size: 40px;
+    }
+    #about_us_content{
+        font-size: 20px;
+    }
+}

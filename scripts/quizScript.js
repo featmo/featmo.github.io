@@ -39,10 +39,12 @@ function oneSelect(answer){
 
 function checkAnswer(){
     if(imagePath.includes(quizAnswer)){
-        console.log("Correct Submited: " +quizAnswer);
+        console.log("Correct Submitted: " +quizAnswer);
+        alert("Correct Submitted: " +quizAnswer);
     }
     else{
-        console.log("Incorrect Submited: " +quizAnswer);
+        console.log("Incorrect Submitted: " +quizAnswer);
+        alert("Incorrect Submitted: " +quizAnswer)
     }    
     generateImage(currentImage);
     
