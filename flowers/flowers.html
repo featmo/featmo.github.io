@@ -20,7 +20,7 @@
             
 <!------------------------------ JavaScript link --------------------------------->
             
-<!--            <script type="text/javascript" src="scripts/homeScript.js" defer></script>-->
+            <script type="text/javascript" src="../scripts/homeScript.js" defer></script>
          
 <!------------------------------- External CSS link ------------------------------->
             
@@ -52,7 +52,7 @@
                         <li class="topnav_right"><a href="../contact/contact.html">Contact</a></li>
                         <li class="topnav_right"><a href="#about">About</a></li>
                         <li class="topnav_right"><a href="#delivery">Delivery</a></li>
-                        <li class="dropdown_icon" id="dropdown_btn"><a href="javascript:void(0);" onclick="dropdownMenu()">&#9776;</a></li>
+                        <li class="dropdown_icon"><a href="">&#9776;</a></li>
                     </ul>
                 </nav>
             </header>
@@ -183,19 +183,5 @@
                     </div>
                 </div>
             </footer>
-            
-<!---------  JavaScript (needs to be externalised) --------->
-            <script>
-                function dropdownMenu(){
-                    const dropdown = document.getElementById('dropdown_click');
-                    if(dropdown.className=== "topnav"){
-                    dropdown.className+= " mobile";
-                    }
-                    else{
-                    dropdown.className= "topnav";
-                    }
-                }
-            </script>
-
         </body>
     </html>

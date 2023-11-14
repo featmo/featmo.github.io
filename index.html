@@ -22,7 +22,7 @@
             
 <!------------------------------ JavaScript link --------------------------------->
             
-<!--            <script type="text/javascript" src="scripts/homeScript.js" defer></script>-->
+            <script type="text/javascript" src="scripts/homeScript.js" defer></script>
 
 <!------------------------------ External CSS link ------------------------------->
            
@@ -54,12 +54,12 @@
                         <li class="topnav_right"><a href="contact/contact.html">Contact</a></li>
                         <li class="topnav_right"><a href="#about">About</a></li>
                         <li class="topnav_right"><a href="#delivery">Delivery</a></li>
-                        <li class="dropdown_icon" id="dropdown_btn"><a href="javascript:void(0);" onclick="dropdownMenu()">&#9776;</a></li>
+                        <li class="dropdown_icon"><a href="">&#9776;</a></li>
                     </ul>
                 </nav>
             </header>
             
-<!------------- Homepage Products Section (written by Catherine)-------------------->
+            <!------------- Homepage Products Section (written by Catherine)-------------------->
             
             <div class= "parent_container">
                  <div class= "child">
@@ -126,11 +126,9 @@
                         <div class="col-md-4">
                             <h5 class="footer-heading mb-3">Contact</h5>
                             <ul class="footer-list">
-                                <li><i class="bi bi-chat-fill footer-icon"></i><a class="footer-link"
-                                        href="../contact/contact.html">Contact Form</a>
+                                <li><i class="bi bi-chat-fill footer-icon"></i><a class="footer-link" href="../contact/contact.html">Contact Form</a>
                                 </li>
-                                <li><i class="bi bi-envelope-fill footer-icon"></i><a class="footer-link"
-                                        href="mailto:example@theflower.co">example@theflower.co</a>
+                                <li><i class="bi bi-envelope-fill footer-icon"></i><a class="footer-link" href="mailto:example@theflower.co">example@theflower.co</a>
                                 </li>
                                 <li><i class="bi bi-telephone-fill footer-icon"></i><a class="footer-link"
                                         href="tel:0112341234">(01) 1234
@@ -139,23 +137,8 @@
                                     Castleknock, Dublin, D08 E1W3</li>
                             </ul>
                         </div>
-
                     </div>
                 </div>
             </footer>
-            
-<!---------  JavaScript (needs to be externalised) --------->
-            <script>
-                function dropdownMenu(){
-                    const dropdown = document.getElementById('dropdown_click');
-                    if(dropdown.className=== "topnav"){
-                    dropdown.className+= " mobile";
-                    }
-                    else{
-                    dropdown.className= "topnav";
-                    }
-                }
-            </script>
-
         </body>
     </html>

@@ -1,3 +1,20 @@
+function dropdownChristmas(){
+    const dropdown = document.getElementById('dropdown_click');
+    if(dropdown.className=== "christmas_border"){
+    dropdown.className+= " mobile";
+    }
+    else{
+    dropdown.className= "christmas_border";
+    }
+}
+
+const dropdownIcon= document.querySelector(".dropdown_icon");
+
+dropdownIcon.addEventListener("click", function (e){
+    dropdownChristmas();
+    event.preventDefault();
+});
+
 const snowContainer = document.getElementById("snow-container");
 const snowContent = ['&#10052', '&#10053', '&#10054']
 
