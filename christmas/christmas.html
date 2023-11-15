@@ -18,8 +18,12 @@
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@700&family=Original+Surfer&display=swap" rel="stylesheet">
             
-<!------------------------------ JavaScript link --------------------------------->
+<!---------------------------- jQuery import ------------------------------>
+        
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
             
+<!------------------------------ JavaScript link --------------------------------->
+            <script type="text/javascript" src="../scripts/productsScript.js" defer></script>
             <script type="text/javascript" src="../scripts/christmasScript.js" defer></script>
             
 <!------------------------------- External CSS link ------------------------------->
@@ -50,7 +54,7 @@
                         <li><a href="../flowers/flowers.html">Flowers</a></li>
                         <li><a href="../gifts/gifts.html">Gifts</a></li>
                         <li class="topnav_right"><a href="../contact/contact.html">Contact</a></li>
-                        <li class="topnav_right"><a href="#about">About</a></li>
+                        <li class="topnav_right"><a href="../about/about.html">About</a></li>
                         <li class="topnav_right"><a href="#delivery">Delivery</a></li>
                         <li class="dropdown_icon"><a href="">&#9776;</a></li>
                     </ul>
@@ -73,7 +77,7 @@
             <div class="container px-5 py-3 my-3 content-container-christmas text-center">
                 <div class="row justify-content-around">
                     <div class="col-lg-6 mb-5">
-                        <div class="card">
+                        <div class="card first-product">
                             <img src="../images/christmas_images/christmas_flowers_1.jpg" class="card-img-top" alt="Picture of Christmas flowers"
                                 data-bs-toggle="modal" data-bs-target="#exampleModal">
                             <div class="card-body">
@@ -83,7 +87,7 @@
                         </div>
                     </div>
                     <div class="col-lg-6 mb-5">
-                        <div class="card">
+                        <div class="card second-product">
                             <img src="../images/christmas_images/christmas_flowers_4.png" class="card-img-top" alt="Picture of Christmas Holly bouquet"
                                 data-bs-toggle="modal" data-bs-target="#exampleModal">
                             <div class="card-body">
@@ -93,7 +97,7 @@
                         </div>
                     </div>
                     <div class="col-lg-6 mb-5">
-                        <div class="card">
+                        <div class="card third-product">
                             <img src="../images/christmas_images/christmas_flowers_3.png" class="card-img-top" alt="Picture of Christmas flowers"
                                 data-bs-toggle="modal" data-bs-target="#exampleModal">
                             <div class="card-body">
@@ -103,7 +107,7 @@
                         </div>
                     </div>
                     <div class="col-lg-6 mb-5">
-                        <div class="card">
+                        <div class="card fourth-product">
                             <img src="../images/christmas_images/christmas_flowers_2.png" class="card-img-top" alt="Picture of Christmas flowers">
                             <div class="card-body">
                                 <h3 class="card-title">All the Trimmings Bouquet</h3>
@@ -112,7 +116,7 @@
                         </div>
                     </div>
                     <div class="col-lg-6 mb-5">
-                        <div class="card">
+                        <div class="card fifth-product">
                             <img src="../images/christmas_images/wreath.jpg" class="card-img-top" alt="Picture of a Christmas wreath">
                             <div class="card-body">
                                 <h3 class="card-title">Wreath</h3>
@@ -121,7 +125,7 @@
                         </div>
                     </div>
                     <div class="col-lg-6 mb-5">
-                        <div class="card">
+                        <div class="card sixth-product">
                             <img src="../images/christmas_images/candle_holder.png" class="card-img-top" alt="Picture of a Christmas candle holder">
                             <div class="card-body">
                                 <h3 class="card-title">Candle Holder</h3>
@@ -130,7 +134,7 @@
                         </div>
                     </div>
                     <div class="col-lg-6 mb-5">
-                        <div class="card">
+                        <div class="card seventh-product">
                             <img src="../images/christmas_images/garland.jpg" class="card-img-top" alt="Picture of a Christmas garland">
                             <div class="card-body">
                                 <h3 class="card-title">Garland</h3>
@@ -139,7 +143,7 @@
                         </div>
                     </div>
                     <div class="col-lg-6 mb-5">
-                        <div class="card">
+                        <div class="card eighth-product">
                             <img src="../images/christmas_images/gift_ties.jpg" class="card-img-top" alt="Picture of a Christmas gift">
                             <div class="card-body">
                                 <h3 class="card-title">Gift Ties</h3>
@@ -154,6 +158,174 @@
             
             <div id="snow-container">
             </div>
+            
+            
+        <!------------ Product Pop-Ups (written by Phillip. Edited by Catherine for this page ------------------->
+            
+        <!-- Modal From Bootstrap Docs https://getbootstrap.com/docs/5.3/components/modal/ -->
+            
+        <!------------------------- Product 1 ------------------------------>
+            
+            <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5">Winter Wonderland Bouquet</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>A beautiful bouquet of whites and creams, featuring roses, orchids, mixed berries and foliage. With a touch of Christmas sparkle!</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" id="orderbtn-one" class="btn btn-primary form-button"><i
+                                    class="bi bi-bag-fill"></i> Order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        <!---------------------------- Product 2 -------------------------->
+            
+              <div class="modal fade" id="myModal_two" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" >Deck the Halls Bouqeut</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Add some Christmas cheer to your home with this festive mix of holly, fir and seasonal foliage.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" id="orderbtn-two" class="order-button btn btn-primary form-button"><i
+                                    class="bi bi-bag-fill"></i> Order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!--------------------------- Product 3 ---------------------->
+            
+            <div class="modal fade" id="myModal_three" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5">Star of Christmas Bouquet</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Nothing says Christmas like a red poinsettia! <br>Featuring a dusting of gold sparkle, these vibrant red blooms will instantly brighten any table or windowsill and bring a real festive feel to the room.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" id="orderbtn-three" class="order-button btn btn-primary form-button"><i
+                                    class="bi bi-bag-fill"></i> Order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!--------------------------- Product 4 ---------------------->
+            
+            <div class="modal fade" id="myModal_four" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" >All the Trimmings Bouquet</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>As the name suggests, "All the Trimmings" has it all. <br>Filled with gold-tipped roses, holly, sparkly gilded berries and mini red poinsettias, it's the perfect addition to your holiday décor and will add a touch of warmth and joy to any space.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" id="orderbtn-four" class="order-button btn btn-primary form-button"><i
+                                    class="bi bi-bag-fill"></i> Order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!--------------------------- Product 5 ---------------------->
+            
+            <div class="modal fade" id="myModal_five" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Wreath</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Add a finishing touch to your festive display this year with our Christmas Wreath.<br>Featuring red and silver berries, ivy and glitter dusted pine cones.<br>
+                            Why not go all out and team your wreath with our matching Christmas Garland?</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" id="orderbtn-five" class="order-button btn btn-primary form-button"><i
+                                    class="bi bi-bag-fill"></i> Order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+          <!--------------------------- Product 6 ---------------------->
+            
+            <div class="modal fade" id="myModal_six" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" >Candle Holder</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>The perfect addition to your festive mantelpiece display!<br>A seasonal combination of artificial pine tree foliage, holly, crabapples and pinecones.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" id="orderbtn-six" class="order-button btn btn-primary form-button"><i
+                                    class="bi bi-bag-fill"></i> Order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+              <!--------------------------- Product 7 ---------------------->
+            
+            <div class="modal fade" id="myModal_seven" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" >Garland</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Adorn your staircase or mantelpiece with our festive Christmas Garland!<br>Featuring red and silver berries, ivy and glitter dusted pine cones.<br>
+                            Why not go all out and team your garland with our matching Christmas Wreath?</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button  type="button" id="orderbtn-seven" class="order-button btn btn-primary form-button"><i
+                                    class="bi bi-bag-fill"></i> Order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!--------------------------- Product 8 ---------------------->
+            
+            <div class="modal fade" id="myModal_eight" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" >Gift Ties</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p >Add some extra cheer to your gifts this Christmas with our gift ties!<br>Each tie features artificial rosehips, holly, and a small gilded branch.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button  type="button" id="orderbtn-eight" class="order-button btn btn-primary form-button"><i
+                                    class="bi bi-bag-fill"></i> Order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
 
          <!-------- Footer was written by Philipp. Christmas edits by Catherine ----> 
             

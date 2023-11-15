@@ -1,10 +1,14 @@
+////////////// Written by Catherine ////////////
+
+///////// Christmas Dropdown Menu Function /////////
+
 function dropdownChristmas(){
     const dropdown = document.getElementById('dropdown_click');
-    if(dropdown.className=== "christmas_border"){
+    if(dropdown.className=== "topnav christmas_border"){
     dropdown.className+= " mobile";
     }
     else{
-    dropdown.className= "christmas_border";
+    dropdown.className= "topnav christmas_border";
     }
 }
 
@@ -14,6 +18,8 @@ dropdownIcon.addEventListener("click", function (e){
     dropdownChristmas();
     event.preventDefault();
 });
+
+//////// Christmas Snow Background Animation ///////
 
 const snowContainer = document.getElementById("snow-container");
 const snowContent = ['&#10052', '&#10053', '&#10054']

@@ -1,3 +1,5 @@
+/////////////// Written by Catherine (using the following tutorial: Beginner Full Stack Web Development: HTML, CSS, React & Node by Mark Wahlbeck, Devslopes) ////////////////
+
 function dropdownMenu() {
     const dropdown = document.getElementById("dropdown_click");
     if (dropdown.className === "topnav") {
