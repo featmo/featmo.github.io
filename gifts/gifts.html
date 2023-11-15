@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!--Written by Philipp unless otherwise noted-->
+
 <head>
     <meta charset="UTF-8">
 
@@ -14,11 +16,11 @@
     <!--BootStrap Icons Import-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
-    <!--Stylesheet Import-->
-    <link rel="stylesheet" href="../styles/style.css">
-
     <!---------------------------- Mobile Responsiveness ----------------------------->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!--Stylesheet Import-->
+    <link rel="stylesheet" href="../styles/style.css">
 
     <title>Gifts</title>
 
@@ -29,7 +31,7 @@
     <header class="main_header">
         <nav class="navbar">
             <div class="container-fluid">
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="../index.html">
                     <img src="../images/Logo_header.png" alt="Logo" width="100%" height="auto"
                         class="d-inline-block align-text-top">
                 </a>
@@ -40,7 +42,7 @@
                 <li><a href="../flowers/flowers.html">Flowers</a></li>
                 <li><a href="#">Gifts</a></li>
                 <li class="topnav_right"><a href="../contact/contact.html">Contact</a></li>
-                <li class="topnav_right"><a href="#about">About</a></li>
+                <li class="topnav_right"><a href="../about/about.html">About</a></li>
                 <li class="topnav_right"><a href="#delivery">Delivery</a></li>
                 <li class="dropdown_icon"><a href="">&#9776;</a></li>
             </ul>
@@ -59,13 +61,14 @@
     </div>
 
 
+    <!----Written by Philipp---->
 
     <div class="container px-5 py-3 my-3 content-container text-center">
         <div class="row justify-content-around">
             <div class="col-lg-6 mb-5">
                 <div class="card">
-                    <img src="../images/gift_images/balloons.jpg" class="card-img-top" alt="Picture of balloons"
-                        data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <img id="balloons-picture" src="../images/gift_images/balloons.jpg" class="card-img-top"
+                        alt="Picture of balloons" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     <div class="card-body">
                         <h3 class="card-title">Balloons</h3>
                         <h4>€30</h4>
@@ -74,8 +77,8 @@
             </div>
             <div class="col-lg-6 mb-5">
                 <div class="card">
-                    <img src="../images/gift_images/champagne.jpg" class="card-img-top" alt="Picture of champagne"
-                        data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <img id="champagne-picture" src="../images/gift_images/champagne.jpg" class="card-img-top"
+                        alt="Picture of champagne" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     <div class="card-body">
                         <h3 class="card-title">Champagne</h3>
                         <h4>€75</h4>
@@ -84,8 +87,8 @@
             </div>
             <div class="col-lg-6 mb-5">
                 <div class="card">
-                    <img src="../images/gift_images/chocolates.jpg" class="card-img-top" alt="Picture of chocolates"
-                        data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <img id="chocolates-picture" src="../images/gift_images/chocolates.jpg" class="card-img-top"
+                        alt="Picture of chocolates" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     <div class="card-body">
                         <h3 class="card-title">Chocolates</h3>
                         <h4>€15</h4>
@@ -94,8 +97,8 @@
             </div>
             <div class="col-lg-6 mb-5">
                 <div class="card">
-                    <img src="../images/gift_images/teddy.jpg" class="card-img-top" alt="Picture of a teddy bear"
-                        data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <img id="teddy-picture" src="../images/gift_images/teddy.jpg" class="card-img-top"
+                        alt="Picture of a teddy bear" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     <div class="card-body">
                         <h3 class="card-title">Teddy Bear</h3>
                         <h4>€25</h4>
@@ -104,8 +107,8 @@
             </div>
             <div class="col-lg-6 mb-5">
                 <div class="card">
-                    <img src="../images/gift_images/vase.jpg" class="card-img-top" alt="Picture of a vase"
-                        data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <img id="vase-picture" src="../images/gift_images/vase.jpg" class="card-img-top"
+                        alt="Picture of a vase" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     <div class="card-body">
                         <h3 class="card-title">Vase</h3>
                         <h4>€20</h4>
@@ -120,14 +123,11 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 id="product-title" class="modal-title fs-5" id="exampleModalLabel">Balloons</h1>
+                    <h1 id="product-title" class="modal-title fs-5" id="exampleModalLabel">Error</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p id="product-description">Add a burst of color to your special occasion with our high-quality
-                        balloons! Perfect
-                        for birthdays, anniversaries, or anything else you need a balloon for. Inflated with helium, our
-                        balloons are sure to 'elevate' any event!</p>
+                    <p id="product-description">Not updated correctly</p>
                 </div>
                 <div class="modal-footer">
                     <button id="order-button" type="button" class="btn btn-primary form-button"><i
