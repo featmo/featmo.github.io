@@ -115,7 +115,7 @@ ul.topnav li.dropdown_icon {
     }
 
     ul.topnav.mobile li {
-        display: inline;
+        display: block;
         float: none;
     }
 
