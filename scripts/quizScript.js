@@ -1,8 +1,10 @@
+//Gobals
 const flowerImages = "../images/quiz_images/"
 imageArray = ["rose", "tulip", "daisy"];
-
 let imagePath = "";
 let currentImage = document.getElementById("quiz_image");
+
+let answerList = document.getElementsByName("answer")
 let quizAnswer = ""; 
 
 //random int from 0 to max;
@@ -10,16 +12,30 @@ function randomInt(max){
     return Math.floor(Math.random()*(max) ); //exclusive random
 }
 
-//random image path
-function randomImagePath(){
-    randInt = randomInt(3);
-    imagePath  = flowerImages + imageArray[randInt]+ ".jpg";
-    return imagePath;
+function generateMessage(){
+    let quiz = document.getElementById("quiz_body");
+    let message = document.getElementById("message");
+    message.style.display = "initial"; 
+    message
+    quiz.remove();
 }
-
 //generate image
 function generateImage(_currentImage_){
-    _currentImage_.src = randomImagePath();
+    randInt = randomInt(imageArray.length);
+    imagePath  = flowerImages + imageArray[randInt]+ ".jpg";
+
+    _currentImage_.src = imagePath;
+    //Splice out specific image
+    // 
+    let index = imageArray.indexOf( imageArray[randInt] );  
+    if(imageArray.length > 0){
+         imageArray.splice(index, 1);
+    }else{
+        generateMessage();
+    }
+    console.log("Index: "+imageArray[index]);
+    console.log("Length: "+imageArray.length);
+    
 }
 // https://stackoverflow.com/questions/9709209/html-select-only-one-checkbox-in-a-group
 function oneSelect(answer){
@@ -27,7 +43,7 @@ function oneSelect(answer){
      * iterate through checkbox answers
      * uncheck all but one
      */
-    let answerList = document.getElementsByName("answer")
+    
     answerList.forEach((item) => {
         if(item !== answer)
             item.checked = false;
@@ -38,18 +54,25 @@ function oneSelect(answer){
 }
 
 function checkAnswer(){
-    if(imagePath.includes(quizAnswer)){
-        console.log("Correct Submitted: " +quizAnswer);
-        alert("Correct Submitted: " +quizAnswer);
+
+    if(quizAnswer.length > 0){
+        if(imagePath.includes(quizAnswer)){
+            console.log("Correct Submitted: " +quizAnswer);
+            alert("Correct Submitted: " +quizAnswer);
+        }
+        else{
+            console.log("Incorrect Submitted: " +quizAnswer);
+            alert("Incorrect Submitted: " +quizAnswer);
+        }    
+        generateImage(currentImage); 
+        answerList.forEach((item) => {
+            item.checked = false;
+        });
     }
-    else{
-        console.log("Incorrect Submitted: " +quizAnswer);
-        alert("Incorrect Submitted: " +quizAnswer)
-    }    
-    generateImage(currentImage);
+
     
 }
-
+//generateMessage();
 generateImage(currentImage)
 console.log(imagePath)
 //document.body.appendChild(randomImage());

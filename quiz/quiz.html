@@ -19,6 +19,9 @@
         <link rel="stylesheet" href="../styles/style.css">
         <!-- Scripts -->
         <script src="../scripts/quizScript.js" defer></script>
+        <script src="../scripts/navbarScript.js" defer></script>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Quiz</title>
         
     </head>
@@ -33,10 +36,10 @@
                 <ul class="topnav" id="dropdown_click">
                     <li><a href="../index.html">Home</a></li>
                     <li class="christmas_topnav"><a href="../christmas/christmas.html">Christmas</a></li>
-                    <li><a href="#bouquets">Flowers</a></li>
+                    <li><a href="../flowers/flowers.html">Flowers</a></li>
                     <li><a href="../gifts/gifts.html">Gifts</a></li>
                     <li class="topnav_right"><a href="../contact/contact.html">Contact</a></li>
-                    <li class="topnav_right"><a href="#">About</a></li>
+                    <li class="topnav_right"><a href="../about/about.html">About</a></li>
                     <li class="topnav_right"><a href="#delivery">Delivery</a></li>
                     <li class="dropdown_icon"><a href="">&#9776;</a></li>
                 </ul>
@@ -53,13 +56,15 @@
                 <label for="answer2">tulip</label><br>
                 <input type="checkbox" id ="answer3" name="answer" value="daisy" onclick="oneSelect(this)">
                 <label for="answer2">daisy</label><br>
-
                 <button id="submit" class="button" onclick="checkAnswer()">Submit</button>
             </div>
             <!-- <form id="quiz_answers" defer>
                 <input type="checkbox" id="answer1" value="tulip">
                 <label for="answer1">tulip</label>
             </form> -->
+        </div>
+        <div class="container px-5 py-3 my-3 content-container flowers_intro" id="message" style="display: none;">
+            <p>Hide</p>
         </div>
         <footer id="footer" class="pt-3 pb-2"> <!-- Footer was written by Philipp -->
             <div class="container">

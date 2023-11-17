@@ -634,3 +634,13 @@ div.christmas_google_font h1 {
 .card h3 {
     font-family: 'Original Surfer', sans-serif;
 }
+
+/*****************************************************************************/
+/*#################### quiz page (written by Moses)################*/
+/*****************************************************************************/
+#quiz_answers{
+    margin: auto 0;
+    width: 50%;
+    font-size:24px;
+    text-align: left;
+}
