@@ -1,6 +1,6 @@
 //Gobals
 const flowerImages = "../images/quiz_images/"
-imageArray = ["rose", "tulip", "daisy"];
+let imageArray = ["rose", "tulip", "daisy"];
 let imagePath = "";
 let image = "";
 let quizImage = document.getElementById("quiz_image");
@@ -31,7 +31,7 @@ function generateMessage(){
     let loss = document.getElementById("loss");
     let key = document.getElementById("key");
 
-    if(correct < 2){
+    if(correct.length >= 2){
         win.style.display = "initial";
         key.textContent = generateKey();
     }
@@ -45,10 +45,10 @@ function generateImage(_currentImage_){
     randInt = randomInt(imageArray.length);
     image = imageArray[randInt];
     imagePath  = flowerImages + image+ ".jpg";
-    _currentImage_.src = imagePath;
+     _currentImage_.src = imagePath; 
     let index = imageArray.indexOf( image );  
-    console.log("Index: "+imageArray[index]);
-    console.log("Length: "+imageArray.length);
+    console.log("Image name: "+imageArray[index]);
+    //console.log("Length: "+imageArray.length);
     
 }
 
@@ -63,42 +63,60 @@ function oneSelect(answer){
         if(item !== answer)
             item.checked = false;
             quizAnswer = answer.value;
-            console.log(answer.value)
+            console.log("Selected answer: "+ answer.value)
     });
 
 }
 
 function checkAnswer(){
-    // logic for getting the right answer     
-    let index = imageArray.indexOf(image);
-    if(quizAnswer.length > 0){     
-        if(imageArray.length > 1){ // 1 is needed otherwise it breaks
+    // logic for getting the right answer
+    // let index = imageArray.indexOf(image);
+    try{ 
+    // I just can't seem to get this right so I'm using some error handling
+    // to deal with the unndefined bugs
+        if(imageArray.length > 1){
+            imageArray.splice(imageArray.indexOf(image), 1);
             if(image.includes(quizAnswer)){
-                correct.pop();
-                console.log("Correct"); 
+                console.log("Correct the answer was " + image);
             }
             else{
-                console.log("Incorrect");
+                console.log("Incorrect the answer was " + image);
+                correct.pop();
             }
-            imageArray.splice(index, 1);
-            generateImage(quizImage);
-        }
-        else{
+        }else{
             generateMessage();
-    
         }
-    }else{
-        alert("Please select an answer")
-    }   
-    answerList.forEach((item) => {
-         item.checked = false;
-    });
+
+        generateImage(quizImage);       
+        answerList.forEach((item) => {
+             item.checked = false;
+        });
+        
+    }catch(e){
+        generateMessage();
+    }
+
+    console.log("Correct: "+correct.length)
+    console.log("Image Array: "+imageArray.length)
+}
+function copyToClip(key){
+    navigator.clipboard.writeText(key.textContent);
+    alert("Copied "+key.textContent);
+}
+function reloadPage(){
+    location.reload();
 }
 
 generateImage(quizImage);
-console.log(imagePath)
-console.log(image)
-console.log(quizAnswer)
+// console.log("Correct: "+correct.length);
+// console.log("Image Array: ");
+// for(let i = 0; i < imageArray.length; i++){
+//     console.log(imageArray[i]);
+// }
+
+
+// console.log(image)
+// console.log(quizAnswer)
 //document.body.appendChild(randomImage());
 
 /**

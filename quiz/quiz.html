@@ -47,7 +47,7 @@
         </header>
         <div class="container px-5 py-3 my-3 content-container flowers_intro" id="quiz_body">
             
-            <img style="width: 100%" id="quiz_image" src="">              
+            <img style="width: 100%" id="quiz_image" src="" onchange="test()">              
             
             <div id="quiz_answers">
                 <input type="checkbox" id ="answer1" name="answer" value="rose" onclick="oneSelect(this)">
@@ -65,10 +65,13 @@
         </div>
         <div class="container px-5 py-3 my-3 content-container flowers_intro" id="win" style="display: none;">
             <p>You win, Here is your discount code</p>
-            <p id="key"></p>
+            <!-- <label>Copy Key</label> -->
+            <button class="button" id="key" onclick="copyToClip(this)"></button>
+            
         </div>
         <div class="container px-5 py-3 my-3 content-container flowers_intro" id="loss" style="display: none;">
-            <p>You Lose, Try Again</p>
+            <p>Sorry not this time</p> 
+            <button class="button" onclick="location.reload()">Try Again</button>
         </div>
         <footer id="footer" class="pt-3 pb-2"> <!-- Footer was written by Philipp -->
             <div class="container">
