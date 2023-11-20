@@ -2,41 +2,56 @@
 const flowerImages = "../images/quiz_images/"
 imageArray = ["rose", "tulip", "daisy"];
 let imagePath = "";
-let currentImage = document.getElementById("quiz_image");
+let image = "";
+let quizImage = document.getElementById("quiz_image");
 
 let answerList = document.getElementsByName("answer")
-let quizAnswer = ""; 
+let quizAnswer = "";
+
+let correct = [1,2,3]; //novel approach to holding correct guesses, values can be arbitrary
 
 //random int from 0 to max;
 function randomInt(max){
     return Math.floor(Math.random()*(max) ); //exclusive random
 }
 
+// novel key generation
+function generateKey(){
+    let seq = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+    let key = ["TFC_"];
+    for(let i = 0; i < 10; i++){
+        key.push(seq[randomInt(seq.length)]);
+    }   
+    return key.join('');
+}
+
 function generateMessage(){
     let quiz = document.getElementById("quiz_body");
-    let message = document.getElementById("message");
-    message.style.display = "initial"; 
-    message
+    let win = document.getElementById("win");   
+    let loss = document.getElementById("loss");
+    let key = document.getElementById("key");
+
+    if(correct < 2){
+        win.style.display = "initial";
+        key.textContent = generateKey();
+    }
+    else{
+        loss.style.display = "initial"; 
+    }   
     quiz.remove();
 }
 //generate image
 function generateImage(_currentImage_){
     randInt = randomInt(imageArray.length);
-    imagePath  = flowerImages + imageArray[randInt]+ ".jpg";
-
+    image = imageArray[randInt];
+    imagePath  = flowerImages + image+ ".jpg";
     _currentImage_.src = imagePath;
-    //Splice out specific image
-    // 
-    let index = imageArray.indexOf( imageArray[randInt] );  
-    if(imageArray.length > 0){
-         imageArray.splice(index, 1);
-    }else{
-        generateMessage();
-    }
+    let index = imageArray.indexOf( image );  
     console.log("Index: "+imageArray[index]);
     console.log("Length: "+imageArray.length);
     
 }
+
 // https://stackoverflow.com/questions/9709209/html-select-only-one-checkbox-in-a-group
 function oneSelect(answer){
     /**
@@ -48,33 +63,42 @@ function oneSelect(answer){
         if(item !== answer)
             item.checked = false;
             quizAnswer = answer.value;
-            //console.log(answer.value)
+            console.log(answer.value)
     });
 
 }
 
 function checkAnswer(){
-
-    if(quizAnswer.length > 0){
-        if(imagePath.includes(quizAnswer)){
-            console.log("Correct Submitted: " +quizAnswer);
-            alert("Correct Submitted: " +quizAnswer);
+    // logic for getting the right answer     
+    let index = imageArray.indexOf(image);
+    if(quizAnswer.length > 0){     
+        if(imageArray.length > 1){ // 1 is needed otherwise it breaks
+            if(image.includes(quizAnswer)){
+                correct.pop();
+                console.log("Correct"); 
+            }
+            else{
+                console.log("Incorrect");
+            }
+            imageArray.splice(index, 1);
+            generateImage(quizImage);
         }
         else{
-            console.log("Incorrect Submitted: " +quizAnswer);
-            alert("Incorrect Submitted: " +quizAnswer);
-        }    
-        generateImage(currentImage); 
-        answerList.forEach((item) => {
-            item.checked = false;
-        });
-    }
-
+            generateMessage();
     
+        }
+    }else{
+        alert("Please select an answer")
+    }   
+    answerList.forEach((item) => {
+         item.checked = false;
+    });
 }
-//generateMessage();
-generateImage(currentImage)
+
+generateImage(quizImage);
 console.log(imagePath)
+console.log(image)
+console.log(quizAnswer)
 //document.body.appendChild(randomImage());
 
 /**
