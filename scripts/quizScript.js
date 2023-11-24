@@ -1,6 +1,6 @@
 //Gobals
 const flowerImages = "../images/quiz_images/"
-let imageArray = ["rose", "tulip", "daisy"];
+let imageArray = ["rose", "tulip", "daisy", "lavender", "lily", "poppy"];
 let imagePath = "";
 let image = "";
 let quizImage = document.getElementById("quiz_image");
@@ -8,11 +8,18 @@ let quizImage = document.getElementById("quiz_image");
 let answerList = document.getElementsByName("answer")
 let quizAnswer = "";
 
+let score = document.getElementById("score");
+
 let correct = [1,2,3]; //novel approach to holding correct guesses, values can be arbitrary
 
 //random int from 0 to max;
 function randomInt(max){
     return Math.floor(Math.random()*(max) ); //exclusive random
+}
+
+function getScore(num){
+    let val = num;
+    //score.textContent = "Correct "+(6-num)+"/6";
 }
 
 // novel key generation
@@ -31,7 +38,7 @@ function generateMessage(){
     let loss = document.getElementById("loss");
     let key = document.getElementById("key");
 
-    if(correct.length >= 2){
+    if(correct.length > 0){
         win.style.display = "initial";
         key.textContent = generateKey();
     }
@@ -74,28 +81,37 @@ function checkAnswer(){
     try{ 
     // I just can't seem to get this right so I'm using some error handling
     // to deal with the unndefined bugs
-        if(imageArray.length > 1){
-            imageArray.splice(imageArray.indexOf(image), 1);
+    
+    if(quizAnswer !== ""){
+        imageArray.splice(imageArray.indexOf(image), 1);
+        if(correct.length !== 0 && imageArray.length > 0){
             if(image.includes(quizAnswer)){
-                console.log("Correct the answer was " + image);
+                
+                alert("Correct! the answer was " + image);
+                getScore(correct.length);
             }
             else{
-                console.log("Incorrect the answer was " + image);
+                alert("Incorrect! the answer was " + image);             
                 correct.pop();
+                
+                
             }
         }else{
             generateMessage();
         }
-
-        generateImage(quizImage);       
+        
+        generateImage(quizImage);
+        //       
         answerList.forEach((item) => {
              item.checked = false;
         });
+    }
         
     }catch(e){
         generateMessage();
     }
 
+    //getScore(correct.length);
     console.log("Correct: "+correct.length)
     console.log("Image Array: "+imageArray.length)
 }
@@ -107,7 +123,11 @@ function reloadPage(){
     location.reload();
 }
 
+
+
 generateImage(quizImage);
+getScore(correct.length);
+
 // console.log("Correct: "+correct.length);
 // console.log("Image Array: ");
 // for(let i = 0; i < imageArray.length; i++){

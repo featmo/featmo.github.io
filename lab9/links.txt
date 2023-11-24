@@ -1,0 +1,3 @@
+grade: https://featmo.github.io/lab9/rps/grade.html
+
+99 bottles: https://featmo.github.io/lab9/bottles/bottles.html
