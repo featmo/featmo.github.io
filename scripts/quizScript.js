@@ -84,7 +84,7 @@ function checkAnswer(){
     
     if(quizAnswer !== ""){
         imageArray.splice(imageArray.indexOf(image), 1);
-        if(correct.length !== 0 && imageArray.length > 0){
+        if(imageArray.length > 1){
             if(image.includes(quizAnswer)){
                 
                 alert("Correct! the answer was " + image);
