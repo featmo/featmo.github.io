@@ -661,9 +661,21 @@ div.christmas_google_font h1 {
 #quiz_body{
     width: 500px;
 }
+@media screen and (max-width: 690px){
+    #quiz_body{
+        width: 350px;
+    }
+}
 #quiz_answers {
     margin: auto 0;
     width: 50%;
-    font-size: 24px;
+    font-size: 22px;
     text-align: left;
+}
+
+/*****************************************************************************/
+/*#################### about (written by Moses)################*/
+/*****************************************************************************/
+#about_us{
+    text-align: center;
 }

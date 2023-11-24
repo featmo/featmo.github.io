@@ -8,6 +8,8 @@ let quizImage = document.getElementById("quiz_image");
 let answerList = document.getElementsByName("answer")
 let quizAnswer = "";
 
+//let modal_answer = getElementById("modal-answer");
+
 let score = document.getElementById("score");
 
 let correct = [1,2,3]; //novel approach to holding correct guesses, values can be arbitrary
@@ -47,6 +49,7 @@ function generateMessage(){
     }   
     quiz.remove();
 }
+
 //generate image
 function generateImage(_currentImage_){
     randInt = randomInt(imageArray.length);
@@ -75,54 +78,99 @@ function oneSelect(answer){
 
 }
 
-function checkAnswer(){
-    // logic for getting the right answer
-    // let index = imageArray.indexOf(image);
-    try{ 
-    // I just can't seem to get this right so I'm using some error handling
-    // to deal with the unndefined bugs
-    
-    if(quizAnswer !== ""){
-        imageArray.splice(imageArray.indexOf(image), 1);
-        if(imageArray.length > 1){
-            if(image.includes(quizAnswer)){
+// Very verbose attempt at answer checking 
+// function checkAnswer(){
+//     // logic for getting the right answer
+//     // let index = imageArray.indexOf(image);
+//     try{ 
+//     // I just can't seem to get this right so I'm using some error handling
+//     // to deal with the unndefined bugs 
+//     if(quizAnswer !== ""){
+//         imageArray.splice(imageArray.indexOf(image), 1);
+//         if(imageArray.length > 1){
+//             if(image.includes(quizAnswer)){             
+//                 //alert("Correct! the answer was " + image);
+//                 $("#myModal .modal-body").text("Correct! the answer was " + quizAnswer);
+//                 getScore(correct.length);
+//             }
+//             else{
+//                 //alert("Incorrect! the answer was " + image);    
+//                 $("#myModal .modal-body").text("Incorrect! the answer was " + image);         
+//                 correct.pop();
                 
-                alert("Correct! the answer was " + image);
-                getScore(correct.length);
+                
+//             }
+//         }else{
+//             generateMessage();
+//         }
+        
+//         generateImage(quizImage);
+//         //       
+//         answerList.forEach((item) => {
+//              item.checked = false;
+//         });
+//     }
+        
+//     }catch(e){
+//         generateMessage();
+//     }
+
+//     //getScore(correct.length);
+//     console.log("Correct: "+correct.length)
+//     console.log("Image Array: "+imageArray.length)
+// }
+function checkAnswer(){
+    answerList.forEach((item) => {
+        if(item.checked == true){
+            if(imageArray.length > 1){
+                if(image.includes(item.value)){
+                    $("#myModal .modal-body").text("Correct! the answer was " + item.value);                 
+                }              
+                else{        
+                    $("#myModal .modal-body").text("Incorrect! the answer was " + image);
+                    correct.pop();
+                }
             }
             else{
-                alert("Incorrect! the answer was " + image);             
-                correct.pop();
-                
-                
+                generateMessage();
             }
-        }else{
-            generateMessage();
-        }
-        
-        generateImage(quizImage);
-        //       
-        answerList.forEach((item) => {
-             item.checked = false;
-        });
-    }
-        
-    }catch(e){
-        generateMessage();
-    }
+            
+            answerList.forEach((item) => {
+                item.checked = false;
+            });
+        }   
+    });
+}
 
-    //getScore(correct.length);
-    console.log("Correct: "+correct.length)
-    console.log("Image Array: "+imageArray.length)
-}
-function copyToClip(key){
-    navigator.clipboard.writeText(key.textContent);
-    alert("Copied "+key.textContent);
-}
+// //clipboard
+// function copyToClip(key){
+//     //navigator.clipboard.writeText(key.textContent);
+//     //alert("Copied "+key.textContent);
+// }
+//reload page
 function reloadPage(){
     location.reload();
 }
 
+//show answer
+$(document).ready(function(){
+    $("#submit").click(function(){
+        $("#myModal").modal('show');      
+        checkAnswer();
+        imageArray.splice(imageArray.indexOf(image), 1);
+        generateImage(quizImage);    
+    });
+    
+});
+
+//to clip board
+$(document).ready(function(){
+    $("#key").click(function(){
+        navigator.clipboard.writeText( $("#key").text() );
+        $("#clip-response").modal('show');   
+        
+    });
+});
 
 
 generateImage(quizImage);

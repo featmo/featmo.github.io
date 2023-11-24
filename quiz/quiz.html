@@ -4,19 +4,23 @@
         <meta charset="UTF-8">
     
         <!--BootStrap Import-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-            crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     
         <!--BootStrap Icons Import-->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
        
+        <!-- JQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        
         <!--Google Fonts Import-->
-       
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap" rel="stylesheet">
+
         <!--Stylesheet Import-->
         <link rel="stylesheet" href="../styles/style.css">
+        
         <!-- Scripts -->
         <script src="../scripts/quizScript.js" defer></script>
         <script src="../scripts/navbarScript.js" defer></script>
@@ -50,30 +54,62 @@
             <img style="width: 100%" id="quiz_image" src="" onchange="test()">              
             
             <div id="quiz_answers">
-                <input type="checkbox" id ="answer1" name="answer" value="rose" onclick="oneSelect(this)">
+                <input class="ans" type="checkbox" id ="answer1" name="answer" value="rose" onclick="oneSelect(this)">
                 <label for="answer1">Rose</label><br>
-                <input type="checkbox" id ="answer2" name="answer" value="tulip" onclick="oneSelect(this)">
+                <input class="ans" type="checkbox" id ="answer2" name="answer" value="tulip" onclick="oneSelect(this)">
                 <label for="answer2">Tulip</label><br>
-                <input type="checkbox" id ="answer3" name="answer" value="daisy" onclick="oneSelect(this)">
+                <input class="ans" type="checkbox" id ="answer3" name="answer" value="daisy" onclick="oneSelect(this)">
                 <label for="answer3">Daisy</label><br>
-                <input type="checkbox" id ="answer4" name="answer" value="lavender" onclick="oneSelect(this)">
+                <input class="ans" type="checkbox" id ="answer4" name="answer" value="lavender" onclick="oneSelect(this)">
                 <label for="answer4">Lavender</label><br>
-                <input type="checkbox" id ="answer5" name="answer" value="lily" onclick="oneSelect(this)">
+                <input class="ans" type="checkbox" id ="answer5" name="answer" value="lily" onclick="oneSelect(this)">
                 <label for="answer5">Lily</label><br>
-                <input type="checkbox" id ="answer6" name="answer" value="poppy" onclick="oneSelect(this)">
+                <input class="ans" type="checkbox" id ="answer6" name="answer" value="poppy" onclick="oneSelect(this)">
                 <label for="answer6">Poppy</label><br>
-                <button id="submit" class="button" onclick="checkAnswer()">Submit</button><h2 id="score"><h2>
+                <button id="submit" class="button" data-toggle="modal" data-target="#myModal">Submit</button><h2 id="score"><h2>
             </div>
             <!-- <form id="quiz_answers" defer>
                 <input type="checkbox" id="answer1" value="tulip">
                 <label for="answer1">tulip</label>
             </form> -->
         </div>
+
+        <!------------ Product Pop-Ups (written by Phillip. Edited by Moses for this page ------------------->   
+        <!-- Modal From Bootstrap Docs https://getbootstrap.com/docs/5.3/components/modal/ -->  
+        <!------------------------- Product 1 ------------------------------>
+     
+        <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <!-- <h1 id="product-title" class="modal-title fs-5" id="exampleModalLabel">Answer</h1> -->
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p id="modal-answer"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="container px-5 py-3 my-3 content-container flowers_intro" id="win" style="display: none;">
             <p>You win, Here is your discount code</p>
             <!-- <label>Copy Key</label> -->
-            <button class="button" id="key" onclick="copyToClip(this)"></button>
+            <button class="button" id="key">TFC</button>
             
+        </div>
+        <!-- clip board dialogue -->
+        <div class="modal fade" id="clip-response" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <!-- <h1 id="product-title" class="modal-title fs-5" id="exampleModalLabel">Answer</h1> -->
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p id="modal-answer">Copied to Clip</p>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="container px-5 py-3 my-3 content-container flowers_intro" id="loss" style="display: none;">
             <p>Sorry not this time</p> 
