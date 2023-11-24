@@ -8,23 +8,14 @@ let quizImage = document.getElementById("quiz_image");
 let answerList = document.getElementsByName("answer")
 let quizAnswer = "";
 
-//let modal_answer = getElementById("modal-answer");
-
-let score = document.getElementById("score");
-
-let correct = [1,2,3]; //novel approach to holding correct guesses, values can be arbitrary
+let correct = []; //novel approach to holding correct guesses, values can be arbitrary
 
 //random int from 0 to max;
 function randomInt(max){
     return Math.floor(Math.random()*(max) ); //exclusive random
 }
 
-function getScore(num){
-    let val = num;
-    //score.textContent = "Correct "+(6-num)+"/6";
-}
-
-// novel key generation
+// simple key generation
 function generateKey(){
     let seq = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
     let key = ["TFC_"];
@@ -40,7 +31,7 @@ function generateMessage(){
     let loss = document.getElementById("loss");
     let key = document.getElementById("key");
 
-    if(correct.length > 0){
+    if(correct.length > 3){
         win.style.display = "initial";
         key.textContent = generateKey();
     }
@@ -58,8 +49,7 @@ function generateImage(_currentImage_){
      _currentImage_.src = imagePath; 
     let index = imageArray.indexOf( image );  
     console.log("Image name: "+imageArray[index]);
-    //console.log("Length: "+imageArray.length);
-    
+    //console.log("Length: "+imageArray.length); 
 }
 
 // https://stackoverflow.com/questions/9709209/html-select-only-one-checkbox-in-a-group
@@ -67,8 +57,7 @@ function oneSelect(answer){
     /**
      * iterate through checkbox answers
      * uncheck all but one
-     */
-    
+     */  
     answerList.forEach((item) => {
         if(item !== answer)
             item.checked = false;
@@ -78,68 +67,27 @@ function oneSelect(answer){
 
 }
 
-// Very verbose attempt at answer checking 
-// function checkAnswer(){
-//     // logic for getting the right answer
-//     // let index = imageArray.indexOf(image);
-//     try{ 
-//     // I just can't seem to get this right so I'm using some error handling
-//     // to deal with the unndefined bugs 
-//     if(quizAnswer !== ""){
-//         imageArray.splice(imageArray.indexOf(image), 1);
-//         if(imageArray.length > 1){
-//             if(image.includes(quizAnswer)){             
-//                 //alert("Correct! the answer was " + image);
-//                 $("#myModal .modal-body").text("Correct! the answer was " + quizAnswer);
-//                 getScore(correct.length);
-//             }
-//             else{
-//                 //alert("Incorrect! the answer was " + image);    
-//                 $("#myModal .modal-body").text("Incorrect! the answer was " + image);         
-//                 correct.pop();
-                
-                
-//             }
-//         }else{
-//             generateMessage();
-//         }
-        
-//         generateImage(quizImage);
-//         //       
-//         answerList.forEach((item) => {
-//              item.checked = false;
-//         });
-//     }
-        
-//     }catch(e){
-//         generateMessage();
-//     }
-
-//     //getScore(correct.length);
-//     console.log("Correct: "+correct.length)
-//     console.log("Image Array: "+imageArray.length)
-// }
 function checkAnswer(){
+    $("#myModal .modal-body").text("Incorrect!");
     answerList.forEach((item) => {
-        if(item.checked == true){
-            if(imageArray.length > 1){
+        if(item.checked == true){          
+            if(imageArray.length > 0){
                 if(image.includes(item.value)){
-                    $("#myModal .modal-body").text("Correct! the answer was " + item.value);                 
+                    $("#myModal .modal-body").text("Correct! the answer was " + item.value);
+                    correct.push(1);           
                 }              
                 else{        
-                    $("#myModal .modal-body").text("Incorrect! the answer was " + image);
-                    correct.pop();
+                    $("#myModal .modal-body").text("Incorrect! the answer was " + image);    
                 }
             }
             else{
                 generateMessage();
-            }
-            
-            answerList.forEach((item) => {
-                item.checked = false;
-            });
-        }   
+            }    
+        }     
+        item.checked = false;
+           
     });
+    
 }
 
 // //clipboard
@@ -158,7 +106,8 @@ $(document).ready(function(){
         $("#myModal").modal('show');      
         checkAnswer();
         imageArray.splice(imageArray.indexOf(image), 1);
-        generateImage(quizImage);    
+        generateImage(quizImage);
+            
     });
     
 });
@@ -172,9 +121,13 @@ $(document).ready(function(){
     });
 });
 
+//img src undefined error quick fix
+$("#quiz_image").on("error", function (){
+    generateMessage();
+});
 
 generateImage(quizImage);
-getScore(correct.length);
+getScore(correct);
 
 // console.log("Correct: "+correct.length);
 // console.log("Image Array: ");
