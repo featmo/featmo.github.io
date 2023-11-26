@@ -1,6 +1,3 @@
-// submit button activation
-// source: https://stackoverflow.com/questions/67961789/enable-submit-button-after-form-fields-are-fill
-
 const submitButton = document.getElementById('submit-button');
 const email = document.getElementById('email');
 const phoneNumber = document.getElementById('phone-number');
@@ -103,8 +100,6 @@ function submitForm() {
 }
 
 function downloadFile() {
-    // https://stackoverflow.com/questions/34156282/how-do-i-save-json-to-local-text-file
-    // https://www.geeksforgeeks.org/javascript-program-to-write-data-in-a-text-file/
     const link = document.createElement('a');
     const text = "Email: " + email.value + "\r\nPhone Number: " + phoneNumber.value + "\r\nContact Reason: " + contactReason.value + "\r\nMessage: " + message.value;
     const file = new Blob([text], { type: 'text/plain;' });
