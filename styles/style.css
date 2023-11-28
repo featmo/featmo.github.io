@@ -191,7 +191,7 @@ h2.homepage_h2 {
 
 /*############ Divs on Mobile Device (written by Catherine)################*/
 
-@media screen and (max-width: 716px) {
+@media screen and (max-width: 865px) {
     .product_container {
         display: block !important;
     }
