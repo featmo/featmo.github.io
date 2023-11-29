@@ -127,40 +127,6 @@ $("#quiz_image").on("error", function (){
 });
 
 generateImage(quizImage);
-getScore(correct);
+//getScore(correct);
 
-// console.log("Correct: "+correct.length);
-// console.log("Image Array: ");
-// for(let i = 0; i < imageArray.length; i++){
-//     console.log(imageArray[i]);
-// }
-
-
-// console.log(image)
-// console.log(quizAnswer)
-//document.body.appendChild(randomImage());
-
-/**
- * Major todo is to refactor the way he functions qccess the data
- * currenntly it's very haphazard
- * somefunctions directly reference variables
- * orthers return and manipulate
- * all in all needs to have a standardised  design
- * this will work for the time being however
- * 
- */
-/*
-* todo
-* 
-* get images
-* randomly display images every reload
-* 
-* list of answers:
-* if image path string contains answer substring:
-*     print correct
-*     do something else
-* else
-*     incorrect
-* 
-*/
 
