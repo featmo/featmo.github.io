@@ -1,0 +1,23 @@
+body {
+    font-family: Arial;
+    background-color: #eee;
+}
+a{
+    color: inherit;
+}
+#_main_{
+    background-color: aquamarine;
+    margin: auto 0;
+    max-width: 100%;
+    padding: 1em;
+}
+#title{
+    justify-content: center;
+    
+}
+.spacer{
+    height: 1em;
+}
+#navbar{
+    justify-content: space-around;
+}
