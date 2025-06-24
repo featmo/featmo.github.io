@@ -1,0 +1,49 @@
+/* blog.css */
+
+
+.post-list {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+  font-family: 'Inter', sans-serif;
+}
+
+.post-list li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  transition: background 0.2s ease;
+}
+
+.post-list li::before {
+  content: '◆';
+  position: absolute;
+  left: 0;
+  color: #999;
+  font-size: 0.9rem;
+  line-height: 1;
+}
+
+.post-list a {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+.post-list .title {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.95rem;
+}
+
+.post-list .date {
+  font-family: monospace;
+  font-size: 0.85rem;
+  opacity: 0.6;
+}

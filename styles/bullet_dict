@@ -1,0 +1,101 @@
+/* Symbols for custom bullets using ::before */
+
+'⟡'  /* Crystal node / signal point — elegant, balanced */
+'→'  /* Directional pointer — sleek, forward-thinking */
+'▸'  /* Triangular bullet — feels like a terminal prompt */
+'›'  /* Thin arrow — minimalist UI style */
+'◦'  /* Small hollow dot — pulse or node */
+'●'  /* Filled circle — classic but bold */
+'⊳'  /* Geometric input mark — precise, tech feel */
+'※'  /* Reference mark — journal/annotation vibe */
+'⌬'  /* Benzene ring — scientific / symbolic logic */
+'⨳'  /* Target cross — “this matters” / attention */
+'✶'  /* Starburst — works for standout posts or highlights */
+'⭑'  /* Stylized star — alternate “featured” symbol */
+'∆'  /* Delta — change, shift, transformation */
+'≡'  /* Triple bar — logic / identity / “same as” */
+'‣'  /* Triangular bullet — traditional alternative */
+
+Here’s your **custom cheat sheet of bullet symbols** filtered by **shape**, **tone**, and **use case**, tailored to your aesthetic: transhuman, minimalist, intelligent.
+
+---
+
+## 🧩 BULLET SYMBOL CHEAT SHEET
+
+### ● SHAPE: **Circles / Nodes**
+
+| Symbol | Unicode | Use Case                    | Tone                  |
+| ------ | ------- | --------------------------- | --------------------- |
+| `•`    | U+2022  | Default bullet              | Neutral, clean        |
+| `◦`    | U+25E6  | Concept list / subtle steps | Light, airy           |
+| `●`    | U+25CF  | Anchored post / emphasis    | Bold, assertive       |
+| `◍`    | U+25CD  | Cyclical / system node      | Symbolic, modular     |
+| `◎`    | U+25CE  | Highlighted node            | Neutral-core, radiant |
+
+---
+
+### ◆ SHAPE: **Diamonds / Polygons**
+
+| Symbol | Unicode | Use Case                     | Tone                      |
+| ------ | ------- | ---------------------------- | ------------------------- |
+| `◆`    | U+25C6  | Important idea               | Structured, refined       |
+| `◇`    | U+25C7  | Optional trail               | Minimal, outlined         |
+| `⬖`    | U+2B16  | Peripheral note / annotation | Technical                 |
+| `⟡`    | U+27E1  | Featured or high-signal post | Transhuman / signal-based |
+
+---
+
+### ➤ SHAPE: **Arrows / Flow Indicators**
+
+| Symbol | Unicode | Use Case                 | Tone             |
+| ------ | ------- | ------------------------ | ---------------- |
+| `→`    | U+2192  | Linear progression       | Forward, sharp   |
+| `▸`    | U+25B8  | CLI-feel / terminal list | Minimal tech     |
+| `‣`    | U+2023  | Refined default          | Neutral-powerful |
+| `›`    | U+203A  | Breadcrumb / drill-in    | Subtle, lean     |
+
+---
+
+### ✶ SHAPE: **Stars / Radiants**
+
+| Symbol | Unicode | Use Case             | Tone                |
+| ------ | ------- | -------------------- | ------------------- |
+| `✶`    | U+2736  | Spotlight post       | Electric, energetic |
+| `✴`    | U+2734  | Novelty / WIP marker | Creative            |
+| `⭑`    | U+2B51  | "Starred" reference  | Soft highlight      |
+
+---
+
+### ∴ SHAPE: **Logical / Semantic**
+
+| Symbol | Unicode | Use Case                       | Tone                         |
+| ------ | ------- | ------------------------------ | ---------------------------- |
+| `∴`    | U+2234  | “Therefore” / conclusion point | Logical, old-school          |
+| `≡`    | U+2261  | Identity / core principle      | Mathematical, bold           |
+| `⊳`    | U+22B3  | Precedence / leads into        | Symbolic logic               |
+| `⌬`    | U+232C  | Scientific node / structure    | Semantic, chemistry-inspired |
+
+---
+
+## 💡 Usage Tips
+
+### CSS Example:
+
+```css
+.post-list li::before {
+  content: '⊳'; /* swap with any above */
+  font-size: 0.9rem;
+  color: #999;
+}
+```
+
+### Visual Strategy:
+
+* Use `⟡`, `⊳`, or `◦` for high-information posts
+* Use `→`, `▸`, or `›` for lists and sequences
+* Use `✶` or `⭑` sparingly for standout or featured posts
+
+---
+
+Would you like me to turn this into a reusable Markdown or HTML reference file to drop in your site folder?
+

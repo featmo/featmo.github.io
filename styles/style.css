@@ -1,29 +1,99 @@
+
 body {
-  font-family: system-ui, sans-serif;
-  background-color: #151515;
-  color: #8d8d8d;
-  margin: 0;
-  padding: 0;
-  text-align: justify;
-}
-header, main, footer {
-  max-width: 720px;
+  font-family: 'Inter', sans-serif;
+  color: #1a1a1a;
+  background: #fff;
+  line-height: 1.6;
   margin: 0 auto;
+  /* max-width: 700px; */
   padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
 }
-h1, h2 {
-  border-bottom: 1px solid #dee2e6;
-  padding-bottom: 0.3em;
+
+header h1 {
+  /* background-color: #8bae94; */
+  margin-left: -0.2rem;
+  margin-bottom: 0rem;
 }
-nav a {
-  margin-right: 1rem;
+
+@media (max-width: 700px) {
+  header h1 {
+    font-size: 50px;
+  }
+}
+
+header p {
+  margin-top: 0;
+  font-size: 14px;
+  font-weight: 600;  
+}
+
+h1, h2{
+  font-weight: 800;
+  margin-top: 1rem;
+}
+h1{
+  font-size: 100px;
+  
+}
+h2{
+  font-size: 50px;
+}
+a {
+  color: inherit;
   text-decoration: none;
-  color: #8c8c8c;
+  font-weight: 600;
+  margin-left: 0em;
 }
-.project {
-  margin-bottom: 2rem;
+a:hover {
+  text-decoration:none;
+  color: #4a4a4a;
+  /* font-weight: 700; */
 }
-footer {
-  font-size: 0.9rem;
-  color: #6c757d;
+
+nav a span:hover{
+  text-decoration:underline;
+}
+nav a span{
+  text-decoration:underline;
+  font-weight: 800;
+}
+/* main styling */
+nav{
+  display: flex;
+  flex-direction: row; /* default: horizontal */
+  flex-wrap: wrap; 
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+  background-color: #ffffff;
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+main{
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section{
+  text-align: justify;
+  width: 95%;
+}
+#contact{
+  text-align: center;
+}
+
+/* Footer */
+footer p{
+  font-size: 10px;
 }

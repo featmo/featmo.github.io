@@ -3,49 +3,65 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Moses Eribo | Portfolio</title>
+  <title>Moses | Portfolio</title>
   <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="styles/project-list.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-    <h1>Moses Eribo</h1>
-    <p>Machine Learning & Graphics Developer | Technical Artist | Systems Explorer</p>
+    <h1>Moses</h1>
+    <p>Machine Learning / Graphics / Systems Explorer</p>
     <nav>
       <a href="#projects">Projects</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
-      <a href="blog/blog.html">italktorobots</a>
+      <a href="blog/blog.html"><span>italktorobots</span></a>
     </nav>
   </header>
-
   <main>
     <section id="about">
       <h2>About</h2>
-      <p>I am currently a Machine Learning & Image Processing Research Assistant at Dublin Dental Hospital, where I develop real-time inference tools for intraoral 3D scan analysis using PyTorch and Blender. My background spans procedural graphics at Unity Technologies, shader development in OpenGL/GLSL, and self-directed low-level rendering projects. I enjoy exploring the space between automation, ML, and computer graphics.</p>
+      <p>I am currently a Machine Learning & Image Processing Research Assistant, where I develop real-time inference tools for intraoral 3D scan analysis using PyTorch and Blender. My background spans procedural graphics at Unity Technologies, shader development in OpenGL/GLSL, and self-directed low-level rendering projects. I enjoy exploring the space between automation, ML, and computer graphics.</p>
     </section>
     <section id="projects">
+
       <h2>Projects</h2>
+
       <div class="project">
         <h3>Landmarkerr: Intraoral Landmark Detection Tool</h3>
         <p>Developed real-time <a href="https://www.linkedin.com/feed/update/urn:li:activity:7336778837634048001/">landmark detection</a> for 3D dental scans using PyTorch, FastAPI, and Blender integration. Contributed to a PhD-led research initiative and learned ML pipelines from scratch.</p>
       </div>
+
       <div class="project">
         <h3>Procedural Asset Tools at Unity</h3>
         <p>Built tools for photogrammetry and environment art, including a <a href="https://www.artstation.com/artwork/kQxvXy">Houdini foliage</a> scatterer used in Apple’s Prehistoric Planet.</p>
       </div>
+
       <div class="project">
         <h3>Experiments</h3>
-        <p>Here are some personal projects, mostly for learning and reference</p>
-        <p>Software-based <a href="https://gist.github.com/featmo/e0373d11cd81429f543772c379925187">splatting renderer</a> built in python</p>
-        <p>ShaderToy noise <a href="https://www.shadertoy.com/view/l3jBDG">domain warping</a></p>
-        <p></p>
+        <p>Here are some personal projects, mostly for learning and reference:</p>
+        <ul class="project-list">
+          <li>
+            Software-based 
+            <a href="https://gist.github.com/featmo/e0373d11cd81429f543772c379925187">splatting renderer</a> 
+            built in Python
+          </li>
+          <li>
+            ShaderToy noise 
+            <a href="https://www.shadertoy.com/view/l3jBDG">domain warping</a>
+          </li>
+        </ul>
       </div>
+
     </section>
     <section id="contact">
-      <h2>Contact</h2>
+      <!-- <h3>Contact</h3> -->
+      <nav>
       <p><a href="mailto:moseseribo@gmail.com">Email</a></p>
       <p><a href="https://www.linkedin.com/in/moses-eribo-5b7900108/">LinkedIn</a></p>
       <p><a href="https://github.com/featmo">GitHub</a></p>
+      </nav>
     </section>
   </main>
 
