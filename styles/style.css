@@ -91,7 +91,7 @@ a:hover {
 
 /* Main layout */
 main {
-  width: 75%;
+  width: 95vw;
   max-width: 800px;
   display: flex;
   flex-direction: column;
@@ -99,7 +99,7 @@ main {
 }
 
 section, article {
-  width: 100%;
+  width: 95%;
   text-align: justify;
 }
 
@@ -125,8 +125,8 @@ footer p {
   }
 
   .heading-block {
-    text-align: center;
-    align-self: center;
+    text-align: left;
+    align-self: left;
   }
 
   nav {
