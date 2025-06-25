@@ -1,9 +1,8 @@
 /* blog.css */
 
-
 .post-list {
   list-style: none;
-  padding: 0;
+  padding: 1;
   margin: 2rem 0;
   font-family: 'Inter', sans-serif;
 }
@@ -11,19 +10,20 @@
 .post-list li {
   position: relative;
   padding-left: 2rem;
+  padding-bottom: 0.5em;
   margin-bottom: 1rem;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  border-bottom: 1px solid rgba(117, 117, 117, 0.473);
   transition: background 0.2s ease;
 }
 
 .post-list li::before {
-  content: '◆';
+  content: '›';
   position: absolute;
   left: 0;
   color: #999;
-  font-size: 0.9rem;
+  font-size: 1rem;
   line-height: 1;
 }
 
@@ -37,14 +37,14 @@
 
 .post-list .title {
   font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  font-size: 0.95rem;
+  /* text-transform: lowercase; */
+  letter-spacing: 0.125em;
+  font-size: 0.9rem;
 }
 
 .post-list .date {
-  font-family: monospace;
-  font-size: 0.85rem;
+  /* font-family: monospace; */
+  font-size: 0.9rem;
   opacity: 0.6;
 }
 
@@ -54,11 +54,23 @@ body {
 }
 
 a {
-  color: #9ecbff;
+  color: #9effc2;
 }
+
 
 nav {
   background-color: inherit;
+}
+
+nav a span{
+  color: #9effc2;
+}
+nav a span:hover {
+  color: #4a4a4a;
+}
+
+.nav-back{
+  width: 85vw;
 }
 
 h1, h2, h3 {
@@ -72,5 +84,10 @@ em{
     font-weight: 600;
 }
 
+/* main{
+  border-top: solid 0px #9e9e9e33;
+  border-radius: 0%;
+  padding: 0em;
+} */
 
 /* Optional: style bullets, code blocks, etc. */
